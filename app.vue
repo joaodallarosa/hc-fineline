@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto px-6 py-6 text-center h-screen">
-    <nav class="bg-white border-gray-200">
+    <nav class="border-gray-200">
       <div
         class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
       >
@@ -39,7 +39,7 @@
         </button>
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white"
+            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0 md:"
           >
             <li>
               <a
@@ -170,3 +170,9 @@ useHead({
   meta: [{ name: "description", content: description }],
 });
 </script>
+
+<style>
+ body {
+  background: #f2e8d6
+ }
+</style>
