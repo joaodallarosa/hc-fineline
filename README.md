@@ -1,17 +1,48 @@
-# HC Fineline
+# Nuxt Example
 
-Vuejs3, Nuxt3, Vite and Tailwind.
+Deploy your [Nuxt](https://nuxt.com) project to Vercel with zero configuration.
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/examples/nuxtjs&template=nuxtjs)
+
+_Live Example: https://nuxtjs-template.vercel.app_
+
+Look at the [Nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
 ## Setup
 
-Requirements
-- Node v16.15.1 or higher
+Make sure to install the dependencies:
 
-### Install dependencies
-> npm install
+```bash
+# yarn
+yarn
 
-### Run local development server
-> npm run dev
+# npm
+npm install
 
-### Generate static app
-> npm run generate
+# pnpm
+pnpm install --shamefully-hoist
+```
+
+## Development Server
+
+Start the development server on http://localhost:3000
+
+```bash
+npm run dev
+```
+
+## Production
+
+Build the application for production:
+
+```bash
+npm run build
+```
+
+Locally preview production build:
+
+```bash
+npm run preview
+```
+
+Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
