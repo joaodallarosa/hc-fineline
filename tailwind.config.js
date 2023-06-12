@@ -12,13 +12,17 @@ module.exports = {
   //   extend: {},
   // },
   theme: {
-    extend:
-    {
+    extend: {
       fontFamily: {
-        'geosans': ['Geosans', 'sans-serif']
+        geosans: ["Geosans", "sans-serif"],
       },
+      scale: {
+        "-100": "-1",
+      },
+      height: {
+        "-almost": "95vh"
+      }
     },
   },
   plugins: [],
-}
-
+};

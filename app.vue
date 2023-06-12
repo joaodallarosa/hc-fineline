@@ -2,12 +2,12 @@
   <div class="text-center h-screen font-geosans">
     <nav class="border-gray-200">
       <div
-        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        class="max-w-screen-xl flex flex-wrap space-x-between items-center mx-auto p-4 lg:absolute"
       >
         <a href="https://flowbite.com/" class="flex items-center">
           <img
             src="@/src/images/logo.png"
-            class="h-20 mr-3"
+            class="h-24 mr-3"
             alt="Flowbite Logo"
           />
           <!-- <span
@@ -78,14 +78,10 @@
     <div class="bg-white w-screen">
       <img
             src="@/src/images/banner.png"
-            class="h-96 mr-3"
+            class="h-[50vh] md:h-[95vh] -scale-x-100 ml-auto"
             alt="Banner"
           />
     </div>
-
-
-    
-    
     
     <div class="container ml-auto mr-auto">
       <div
