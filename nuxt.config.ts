@@ -1,9 +1,7 @@
 export default {
-  modules: [
-    '@nuxtjs/tailwindcss'
-  ],
+  modules: ["@nuxtjs/tailwindcss"],
   nitro: {
-    preset: 'vercel-edge',
+    preset: "vercel-edge",
   },
   build: {
     postcss: {
@@ -13,6 +11,9 @@ export default {
           autoprefixer: {},
         },
       },
+    },
+    compilerOptions: {
+      types: ["node", "webpack-env"],
     },
   },
   css: ["@/src/css/tailwind.css"],
