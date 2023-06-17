@@ -1,8 +1,0 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@font-face{
-    font-family: Geosans;
-    src: url(/src/fonts/GeosansLight.ttf), format('ttf');
-}

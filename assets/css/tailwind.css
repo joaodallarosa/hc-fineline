@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Geosans';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url('./assets/fonts/GeosansLight.ttf') format('truetype');
+}
