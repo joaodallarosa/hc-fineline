@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@yeger/vue-masonry-wall": "^4.0.3",
+    "vue-final-modal": "^4.4.2",
     "vue3-lazyload": "^0.3.6"
   }
 }

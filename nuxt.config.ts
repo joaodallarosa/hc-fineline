@@ -16,5 +16,5 @@ export default {
       types: ["node", "webpack-env"],
     },
   },
-  css: ["@/assets/css/tailwind.css"],
+  css: ["@/assets/css/tailwind.css", "vue-final-modal/style.css"],
 };
