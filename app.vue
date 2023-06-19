@@ -108,6 +108,12 @@
       <slot />
     </VueFinalModal>
   </div>
+  <img
+    height="1"
+    width="1"
+    style="display: none"
+    src="https://www.facebook.com/tr?id=1306111036657039&ev=PageView&noscript=1"
+  />
 </template>
 
 <script setup lang="ts">
@@ -187,13 +193,37 @@ for (let i = 1; i <= NUMBER_OF_PHOTOS; i++) {
   }
 }
 
-const description = ref("HC Tattoo - Tag");
 useHead({
-  meta: [{ name: "description", content: description }],
+  // meta: [{ name: "description", content: description }],
+  title: "HC Fineline Tattoo",
+  script: [
+    {
+      async: true,
+      src: "https://www.googletagmanager.com/gtag/js?id=AW-11226818775",
+    },
+    {
+      innerHTML: `window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-11226818775');`,
+    },
+    {
+      innerHTML: `!function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1306111036657039');
+  fbq('track', 'PageView');`,
+    },
+  ],
 });
 
 function openModal(img: string) {
-  console.log("ALOU");
   modalImage = img;
   show.value = true;
 }

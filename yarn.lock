@@ -301,6 +301,20 @@
   "resolved" "https://registry.npmjs.org/@csstools/selector-specificity/-/selector-specificity-2.2.0.tgz"
   "version" "2.2.0"
 
+"@gtm-support/core@^2.0.0":
+  "integrity" "sha512-32hyxR/LIB6EWnUcbbrUzjkAE6PSRtqv/AztEnQ8MuCOQ7+u+yXOssfZqNDSWlQkEBn0Co6f7aHG+vcNZCGiLw=="
+  "resolved" "https://registry.npmjs.org/@gtm-support/core/-/core-2.0.0.tgz"
+  "version" "2.0.0"
+
+"@gtm-support/vue-gtm@^2.0.0":
+  "integrity" "sha512-zcnCMZbjPkTGkQpMkF9U2JcCtK9JiasfoZJCYYJLGKFj0cd7abwNLPMa3/sXB89YqiFniazkP++nIzFU9kZzqw=="
+  "resolved" "https://registry.npmjs.org/@gtm-support/vue-gtm/-/vue-gtm-2.0.0.tgz"
+  "version" "2.0.0"
+  dependencies:
+    "@gtm-support/core" "^2.0.0"
+  optionalDependencies:
+    "vue-router" "^4.1.0"
+
 "@ioredis/commands@^1.1.1":
   "integrity" "sha512-Sx1pU8EM64o2BrqNpEO1CNLtKQwyhuXuqyfH7oGKCk+1a33d2r5saW8zNwm3j6BTExtjrv2BxTgzzkMwts6vGg=="
   "resolved" "https://registry.npmjs.org/@ioredis/commands/-/commands-1.2.0.tgz"
@@ -3643,6 +3657,13 @@
   optionalDependencies:
     "fsevents" "~2.3.2"
 
+"nuxt-facebook-pixel-module@^1.6.0":
+  "integrity" "sha512-+9JGTzf6aXp5sIAsW/oPSP/HTZR0a+2FpFHYGFjvOrwp81mx7i10mt3C1XPcHakUH48kHEQSkB8PH4MD7SPLvQ=="
+  "resolved" "https://registry.npmjs.org/nuxt-facebook-pixel-module/-/nuxt-facebook-pixel-module-1.6.0.tgz"
+  "version" "1.6.0"
+  dependencies:
+    "minimatch" "^3.0.4"
+
 "nuxt@^3.0.0":
   "integrity" "sha512-RNlD78uv04ZiXWmlx9f1tnJfrqsYAWHU+4gbgOTQpIBmQzHWPWiox+fm/1m93iKfEd5sJi9TJUoXX5yBObVZYw=="
   "resolved" "https://registry.npmjs.org/nuxt/-/nuxt-3.0.0.tgz"
@@ -5309,14 +5330,19 @@
     "focus-trap" "^7.4.0"
     "vue" "^3.2.47"
 
-"vue-router@^4.1.6":
+"vue-gtag-next@^1.14.0":
+  "integrity" "sha512-iJl+cOG2GU5NuxqzSSIpt03WVOvZqyKB9TOy7d55KiuvRklcnb2nlqxW5B/a3/sbIt7fla+XEkRyMCcoz0zAHw=="
+  "resolved" "https://registry.npmjs.org/vue-gtag-next/-/vue-gtag-next-1.14.0.tgz"
+  "version" "1.14.0"
+
+"vue-router@^4.1.0", "vue-router@^4.1.6":
   "integrity" "sha512-DYWYwsG6xNPmLq/FmZn8Ip+qrhFEzA14EI12MsMgVxvHFDYvlr4NXpVF5hrRH1wVcDP8fGi5F4rxuJSl8/r+EQ=="
   "resolved" "https://registry.npmjs.org/vue-router/-/vue-router-4.1.6.tgz"
   "version" "4.1.6"
   dependencies:
     "@vue/devtools-api" "^6.4.5"
 
-"vue@^2.0.0 || >=3.0.0", "vue@^3.0.0", "vue@^3.0.0-0 || ^2.6.0", "vue@^3.2.0", "vue@^3.2.25", "vue@^3.2.45", "vue@^3.2.47", "vue@>=2.7 || >=3", "vue@3.3.4":
+"vue@^2.0.0 || >=3.0.0", "vue@^3.0.0", "vue@^3.0.0-0 || ^2.6.0", "vue@^3.0.0-rc.11", "vue@^3.2.0", "vue@^3.2.25", "vue@^3.2.45", "vue@^3.2.47", "vue@>=2.7 || >=3", "vue@3.3.4":
   "integrity" "sha512-VTyEYn3yvIeY1Py0WaYGZsXnz3y5UnGi62GjVEqvEGPl6nxbOrCXbVOTQWBEJUqAyTUk2uJ5JLVnYJ6ZzGbrSw=="
   "resolved" "https://registry.npmjs.org/vue/-/vue-3.3.4.tgz"
   "version" "3.3.4"

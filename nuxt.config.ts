@@ -17,4 +17,7 @@ export default {
     },
   },
   css: ["@/assets/css/tailwind.css", "vue-final-modal/style.css"],
+  head: {
+    title: "HC Fineline Tattoo",
+  },
 };
