@@ -1,5 +1,5 @@
 export default {
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/robots"],
   nitro: {
     preset: "vercel-edge",
   },

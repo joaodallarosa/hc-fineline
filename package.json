@@ -17,6 +17,7 @@
     "tailwindcss": "^3.3.2"
   },
   "dependencies": {
+    "@nuxtjs/robots": "^3.0.0",
     "@yeger/vue-masonry-wall": "^4.0.3",
     "nuxt-facebook-pixel-module": "^1.6.0",
     "vue-final-modal": "^4.4.2",
