@@ -194,7 +194,7 @@ for (let i = 1; i <= NUMBER_OF_PHOTOS; i++) {
 }
 
 useHead({
-  // meta: [{ name: "description", content: description }],
+  meta: [{ name: "description", content: "Brazillian Tattoo Artist based in Paris. Focused on fineline, delicate tattoos." }],
   title: "HC Fineline Tattoo",
   script: [
     {
