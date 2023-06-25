@@ -41,7 +41,9 @@
               >
             </a>
 
-            <button
+            <a
+              target="_blank"
+              href="https://wa.me/message/OXUF5MYCLX3QH1"
               class="px-6 py-3 bg-black text-white text-lg font-bold items-center justify-center fixed lg:static top-[80vh] flex right-8"
             >
               Make an Appointment
@@ -58,7 +60,7 @@
                   fill="white"
                 ></path>
               </svg>
-            </button>
+            </a>
           </div>
         </div>
       </nav>
@@ -194,7 +196,13 @@ for (let i = 1; i <= NUMBER_OF_PHOTOS; i++) {
 }
 
 useHead({
-  meta: [{ name: "description", content: "Brazillian Tattoo Artist based in Paris. Focused on fineline, delicate tattoos." }],
+  meta: [
+    {
+      name: "description",
+      content:
+        "Brazillian Tattoo Artist based in Paris. Focused on fineline, delicate tattoos.",
+    },
+  ],
   title: "HC Fineline Tattoo",
   script: [
     {
