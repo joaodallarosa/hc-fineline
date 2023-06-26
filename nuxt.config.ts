@@ -1,5 +1,9 @@
 export default {
-  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/robots"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "@nuxtjs/robots",
+    "@nuxt/image",
+  ],
   nitro: {
     preset: "vercel-edge",
   },
@@ -18,6 +22,9 @@ export default {
   },
   css: ["@/assets/css/tailwind.css", "vue-final-modal/style.css"],
   head: {
-    title: "HC Fineline Tattoo",
+    title: "Helena de Carvalho | Fineline Tattoo",
+  },
+  image: {
+    // Options
   },
 };
