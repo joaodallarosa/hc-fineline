@@ -121,7 +121,7 @@
           </div>
 
           <div
-            class="h-[150px] lg:h-[300px] max-w-full border border-black rounded-lg flex items-center justify-center text-xl lg:text-3xl"
+            class="h-[150px] lg:h-[300px] max-w-full border border-black rounded-lg flex items-center justify-center text-xl lg:text-3xl font-sans font-thin"
             v-if="item.type === CardType.Text"
           >
             {{ item.text }}
