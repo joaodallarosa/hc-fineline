@@ -23,7 +23,7 @@
           <!-- <NuxtLink :to="switchLocalePath('fr')">Français</NuxtLink> -->
           <!-- {{ $t('chat') }} -->
 
-          <div class="flex items-center text-white text-lg font-bold">
+          <div class="flex items-center text-white text-lg font-sans font-thin">
             <a
               class="text-black flex flex-col lg:flex-row justify-center items-center lg:mr-10"
               href="https://www.instagram.com/carvalho_helena/"
@@ -48,7 +48,7 @@
             <a
               target="_blank"
               href="https://wa.me/message/OXUF5MYCLX3QH1"
-              class="px-4 py-2 bg-black text-white text-lg font-bold items-center justify-center fixed lg:static top-[80vh] flex right-8"
+              class="px-4 py-2 bg-black text-white text-lg font-sans font-thin items-center justify-center fixed lg:static top-[80vh] flex right-8"
             >
               <svg
                 class="mr-2"
@@ -97,7 +97,7 @@
         :max-columns="4"
       >
         <template #default="{ item }">
-          <div
+          <!-- <div
             v-if="item.type === CardType.Image"
             @click="openModal(item.img)"
             class="min-h-[300px]"
@@ -110,6 +110,14 @@
               alt=""
               loading="lazy"
             />
+          </div> -->
+
+          <div
+            v-if="item.type === CardType.Image"
+            class="min-h-[300px]"
+            @click="openModal(item.img)"
+          >
+            <img class="h-auto max-w-full rounded-lg" v-lazy="item.img" />
           </div>
 
           <div
@@ -234,7 +242,7 @@ useHead({
         "Brazillian Tattoo Artist based in Paris. Focused on fineline, delicate tattoos.",
     },
   ],
-  title: "HC Fineline Tattoo",
+  title: "Helena de Carvalho | Fineline Tattoo",
   script: [
     {
       async: true,
@@ -281,7 +289,7 @@ function closeModal() {
 <style>
 body {
   background: #f2e8d6;
-  font-family: Geosans;
+  font-family: Geosans, ;
 }
 
 .masonry-item {
