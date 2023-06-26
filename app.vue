@@ -99,16 +99,10 @@
         <template #default="{ item }">
           <div
             v-if="item.type === CardType.Image"
-            @click="openModal(item.img)"
             class="min-h-[300px]"
+            @click="openModal(item.img)"
           >
-            <nuxt-img
-              fit="cover"
-              preload
-              class="h-auto max-w-full rounded-lg"
-              :src="item.img"
-              loading="lazy"
-            />
+            <img class="h-auto max-w-full rounded-lg" v-lazy="item.img" />
           </div>
 
           <div
