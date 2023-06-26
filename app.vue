@@ -117,7 +117,7 @@
             class="min-h-[300px]"
             @click="openModal(item.img)"
           >
-            <img class="h-auto max-w-full rounded-lg" v-lazy="item.img" />
+            <img class="h-auto max-w-full rounded-lg" v-lazy="item.img" alt="Tattoo Photo" />
           </div>
 
           <div
@@ -243,6 +243,9 @@ useHead({
     },
   ],
   title: "Helena de Carvalho | Fineline Tattoo",
+  htmlAttrs: {
+    lang: "en",
+  },
   script: [
     {
       async: true,
@@ -289,7 +292,7 @@ function closeModal() {
 <style>
 body {
   background: #f2e8d6;
-  font-family: Geosans, ;
+  font-family: Geosans;
 }
 
 .masonry-item {
