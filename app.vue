@@ -99,10 +99,17 @@
         <template #default="{ item }">
           <div
             v-if="item.type === CardType.Image"
-            class="min-h-[300px]"
             @click="openModal(item.img)"
+            class="min-h-[300px]"
           >
-            <img class="h-auto max-w-full rounded-lg" v-lazy="item.img" />
+            <nuxt-img
+              fit="cover"
+              preload
+              class="h-auto max-w-full rounded-lg"
+              :src="item.img"
+              alt=""
+              loading="lazy"
+            />
           </div>
 
           <div
@@ -253,12 +260,12 @@ useHead({
   fbq('track', 'PageView');`,
     },
   ],
-  // link: [
-  //   {
-  //     rel: "icon",
-  //     href: "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧡</text></svg>",
-  //   },
-  // ],
+  link: [
+    {
+      rel: "icon",
+      href: "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧡</text></svg>",
+    },
+  ],
 });
 
 function openModal(img: string) {
