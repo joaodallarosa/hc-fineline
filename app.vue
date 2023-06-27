@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center font-geosans">
+  <div class="text-center font-sans font-thin">
     <div class="w-full fixed px-8 bg-[#f2e8d6]">
       <nav class="relative z-10">
         <div
