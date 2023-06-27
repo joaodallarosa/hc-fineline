@@ -20,20 +20,20 @@
             class="flex flex-col md:flex-row items-center text-white text-normal md:text-lg font-sans font-thin"
           >
             <a
-              class="text-black px-2 md:mr-5 hover:text-white hover:bg-black"
+              class="text-black my-1 px-2 md:mr-5 hover:text-white hover:bg-black"
               href="#about"
               v-smooth-scroll
               >About Helena</a
             >
             <a
-              class="text-black px-2 md:mr-5 hover:text-white hover:bg-black"
+              class="text-black my-1 px-2 md:mr-5 hover:text-white hover:bg-black"
               href="#studio"
               v-smooth-scroll
               >The Studio</a
             >
 
             <a
-              class="text-black px-2 md:mr-5 hover:text-white hover:bg-black"
+              class="text-black my-1 px-2 md:mr-5 hover:text-white hover:bg-black"
               href="https://www.instagram.com/carvalho_helena/"
               target="_blank"
               >Instagram</a
@@ -153,14 +153,14 @@
       </masonry-wall>
     </div>
 
-    <div id="about" class="mx-8 border border-black rounded-lg my-20">
+    <div id="about" class="mx-8 border border-black rounded-lg my-10 md:my-20">
       <div class="grid grid-cols-1 md:grid-cols-2">
         <div class="flex p-10">
           <div class="mb-auto mt-auto max-w-lg max-h-[400px]">
-            <h1 class="text-5xl uppercase text-right">About Helena</h1>
+            <h2 class="text-2xl md:text-5xl uppercase text-right">About Helena</h2>
             <!-- <p class="font-semibold mb-5">Web Developer</p> -->
             <p class="text-lg text-right mt-5">
-              I’m Helena de Carvalho, born in 1993 in south of Brazil. Now based
+              Originally from southern Brazil, now based
               in Paris, my specialty is creating delicate fine line tattoos that
               allow clients to express themselves and commemorate meaningful
               memories. What I love most about my job is connecting with diverse
@@ -178,7 +178,7 @@
       </div>
     </div>
 
-    <div id="studio" class="mx-8 border border-black rounded-lg my-20">
+    <div id="studio" class="mx-8 border border-black rounded-lg my-10 md:my-20">
       <div class="grid grid-cols-1 md:grid-cols-2">
         <div class="max-h-[200px] md:max-h-[600px]">
           <img
@@ -189,7 +189,7 @@
         </div>
         <div class="flex p-10">
           <div class="mb-auto mt-auto max-w-lg max-h-[400px]">
-            <h1 class="text-left text-2xl md:text-5xl uppercase">The Studio</h1>
+            <h2 class="text-left text-2xl md:text-5xl uppercase">The Studio</h2>
             <p class="text-left mt-5 text-lg">
               <a
                 href="https://goo.gl/maps/KqjacKx7tV7oE29s5"
