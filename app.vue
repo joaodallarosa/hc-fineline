@@ -1,30 +1,45 @@
 <template>
-  <div class="text-center h-screen font-geosans">
-    <!-- New Hero Section -->
-    <div class="w-full fixed px-8">
+  <div class="text-center font-geosans">
+    <div class="w-full fixed px-8 bg-[#f2e8d6]">
       <nav class="relative z-10">
         <div
           class="relative z-10 mx-auto w-full xl:px-0 flex justify-between items-center py-4"
         >
           <div>
-            <a
-              href="https://www.instagram.com/carvalho_helena/"
-              class="flex items-center p-4 bg-black rounded-lg"
-            >
+            <a href="#home" v-smooth-scroll class="flex items-center">
               <img
                 src="@/assets/images/logo.png"
-                class="h-16 lg:h-24"
+                class="h-24"
                 alt="Flowbite Logo"
-                style="filter: brightness(0) invert(1)"
               />
+              <!-- style="filter: brightness(0) invert(1)" -->
             </a>
           </div>
-          <!-- <NuxtLink :to="switchLocalePath('en')">English</NuxtLink> -->
-          <!-- <NuxtLink :to="switchLocalePath('fr')">Français</NuxtLink> -->
-          <!-- {{ $t('chat') }} -->
 
-          <div class="flex items-center text-white text-lg font-sans font-thin">
+          <div
+            class="flex flex-col md:flex-row items-center text-white text-normal md:text-lg font-sans font-thin"
+          >
             <a
+              class="text-black px-2 md:mr-5 hover:text-white hover:bg-black"
+              href="#about"
+              v-smooth-scroll
+              >About Helena</a
+            >
+            <a
+              class="text-black px-2 md:mr-5 hover:text-white hover:bg-black"
+              href="#studio"
+              v-smooth-scroll
+              >The Studio</a
+            >
+
+            <a
+              class="text-black px-2 md:mr-5 hover:text-white hover:bg-black"
+              href="https://www.instagram.com/carvalho_helena/"
+              target="_blank"
+              >Instagram</a
+            >
+
+            <!-- <a
               class="text-black flex flex-col lg:flex-row justify-center items-center lg:mr-10"
               href="https://www.instagram.com/carvalho_helena/"
               target="_blank"
@@ -40,15 +55,15 @@
                 />
               </svg>
               <span
-                class="mt-2 lg:mt-0 lg:ml-1 text-base lg:text-xl font-sans font-thin"
+                class="mt-2 lg:mt-0 lg:ml-1"
                 >@carvalho_helena</span
               >
-            </a>
+            </a> -->
 
             <a
               target="_blank"
               href="https://wa.me/message/OXUF5MYCLX3QH1"
-              class="px-4 py-2 bg-black text-white text-lg font-sans font-thin items-center justify-center fixed lg:static top-[80vh] flex right-8"
+              class="px-4 py-2 bg-black text-white text-lg font-sans font-normal items-center justify-center fixed lg:static top-[80vh] flex right-8"
             >
               <svg
                 class="mr-2"
@@ -81,14 +96,18 @@
                   </g>
                 </g>
               </svg>
-              Book your Tattoo
+              Book my Tattoo
             </a>
           </div>
         </div>
       </nav>
     </div>
 
-    <div class="pt-32 lg:pt-40 px-8">
+    <!-- <NuxtLink href="#about">
+      About Me
+    </NuxtLink> -->
+
+    <div class="pt-32 lg:pt-30 px-8" id="home">
       <masonry-wall
         :items="items"
         :column-width="150"
@@ -114,10 +133,14 @@
 
           <div
             v-if="item.type === CardType.Image"
-            class="min-h-[300px]"
+            class=""
             @click="openModal(item.img)"
           >
-            <img class="h-auto max-w-full rounded-lg" v-lazy="item.img" alt="Tattoo Photo" />
+            <img
+              class="h-auto max-w-full rounded-lg"
+              v-lazy="item.img"
+              alt="Tattoo Photo"
+            />
           </div>
 
           <div
@@ -128,6 +151,62 @@
           </div>
         </template>
       </masonry-wall>
+    </div>
+
+    <div id="about" class="mx-8 border border-black rounded-lg my-20">
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="flex p-10">
+          <div class="mb-auto mt-auto max-w-lg max-h-[400px]">
+            <h1 class="text-5xl uppercase text-right">About Helena</h1>
+            <!-- <p class="font-semibold mb-5">Web Developer</p> -->
+            <p class="text-lg text-right mt-5">
+              I’m Helena de Carvalho, born in 1993 in south of Brazil. Now based
+              in Paris, my specialty is creating delicate fine line tattoos that
+              allow clients to express themselves and commemorate meaningful
+              memories. What I love most about my job is connecting with diverse
+              individuals and being a part of their significant moments.
+            </p>
+          </div>
+        </div>
+        <div class="max-h-[200px] md:max-h-[600px]">
+          <img
+            class="w-screen h-full object-cover object-center rounded-b-lg md:rounded-r-lg md:rounded-bl-none"
+            src="./assets/images/minified/about.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="studio" class="mx-8 border border-black rounded-lg my-20">
+      <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="max-h-[200px] md:max-h-[600px]">
+          <img
+            class="w-screen h-full object-cover object-center rounded-t-lg md:rounded-l-lg md:rounded-tr-none"
+            src="./assets/images/studio.png"
+            alt=""
+          />
+        </div>
+        <div class="flex p-10">
+          <div class="mb-auto mt-auto max-w-lg max-h-[400px]">
+            <h1 class="text-left text-2xl md:text-5xl uppercase">The Studio</h1>
+            <p class="text-left mt-5 text-lg">
+              <a
+                href="https://goo.gl/maps/KqjacKx7tV7oE29s5"
+                target="_blank"
+                class="underline"
+                >28, Rue Nicolaï, 75012, Paris</a
+              >
+            </p>
+            <p class="text-left mt-5 text-lg">
+              Located within a Parisian esthetic center, the studio is a clean
+              and serene space. Here, you can expect a private setting for individualized tattoo
+              experiences. It’s a tranquil environment where you can fully immerse
+              yourself in the tattoo process.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <VueFinalModal
