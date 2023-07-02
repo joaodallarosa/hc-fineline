@@ -62,6 +62,7 @@
 
             <a
               target="_blank"
+              @click="onWhatsappClick()"
               href="https://wa.me/message/OXUF5MYCLX3QH1"
               class="px-4 py-2 bg-black text-white text-lg font-sans font-normal items-center justify-center fixed lg:static top-[80vh] flex right-8"
             >
@@ -157,14 +158,16 @@
       <div class="grid grid-cols-1 md:grid-cols-2">
         <div class="flex p-10">
           <div class="mb-auto mt-auto max-w-lg max-h-[400px]">
-            <h2 class="text-2xl md:text-5xl uppercase text-right">About Helena</h2>
+            <h2 class="text-2xl md:text-5xl uppercase text-right">
+              About Helena
+            </h2>
             <!-- <p class="font-semibold mb-5">Web Developer</p> -->
             <p class="text-lg text-right mt-5">
-              Originally from southern Brazil, now based
-              in Paris, my specialty is creating delicate fine line tattoos that
-              allow clients to express themselves and commemorate meaningful
-              memories. What I love most about my job is connecting with diverse
-              individuals and being a part of their significant moments.
+              Originally from southern Brazil, now based in Paris, my specialty
+              is creating delicate fine line tattoos that allow clients to
+              express themselves and commemorate meaningful memories. What I
+              love most about my job is connecting with diverse individuals and
+              being a part of their significant moments.
             </p>
           </div>
         </div>
@@ -200,9 +203,9 @@
             </p>
             <p class="text-left mt-5 text-lg">
               Located within a Parisian esthetic center, the studio is a clean
-              and serene space. Here, you can expect a private setting for individualized tattoo
-              experiences. It’s a tranquil environment where you can fully immerse
-              yourself in the tattoo process.
+              and serene space. Here, you can expect a private setting for
+              individualized tattoo experiences. It’s a tranquil environment
+              where you can fully immerse yourself in the tattoo process.
             </p>
           </div>
         </div>
@@ -334,7 +337,6 @@ useHead({
       innerHTML: `window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'AW-11226818775');`,
     },
     {
@@ -365,6 +367,13 @@ function openModal(img: string) {
 
 function closeModal() {
   show.value = false;
+}
+
+function onWhatsappClick() {
+  gtag('event', 'conversion', {
+      'send_to': 'AW-11226818775/wJ7LCKfgjrYYENfRrukp',
+      // 'event_callback': callback
+  })
 }
 </script>
 
