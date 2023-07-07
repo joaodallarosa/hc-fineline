@@ -11,21 +11,6 @@
         :max-columns="4"
       >
         <template #default="{ item }">
-          <!-- <div
-            v-if="item.type === CardType.Image"
-            @click="openModal(item.img)"
-            class="min-h-[300px]"
-          >
-            <nuxt-img
-              fit="cover"
-              preload
-              class="h-auto max-w-full rounded-lg"
-              :src="item.img"
-              alt=""
-              loading="lazy"
-            />
-          </div> -->
-
           <div
             v-if="item.type === CardType.Image"
             class=""
@@ -42,7 +27,7 @@
             class="h-[150px] lg:h-[300px] max-w-full border border-black rounded-lg flex items-center justify-center text-xl lg:text-3xl font-sans font-thin"
             v-if="item.type === CardType.Text"
           >
-            {{ item.text }}
+            {{ $t(item.text) }}
           </div>
         </template>
       </masonry-wall>
@@ -82,6 +67,10 @@
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
 import { VueFinalModal } from "vue-final-modal";
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
+
+console.log("this", this);
 
 if (process.client) {
   onMounted(() => {
@@ -112,7 +101,7 @@ for (let i = 1; i <= NUMBER_OF_PHOTOS; i++) {
     items = [
       ...items,
       {
-        text: "tattoo artist",
+        text: "grid-tattoo",
         type: CardType.Text,
       },
     ];
@@ -122,7 +111,7 @@ for (let i = 1; i <= NUMBER_OF_PHOTOS; i++) {
     items = [
       ...items,
       {
-        text: "brazillian",
+        text: "grid-brazillian",
         type: CardType.Text,
       },
     ];
@@ -139,7 +128,7 @@ for (let i = 1; i <= NUMBER_OF_PHOTOS; i++) {
     items = [
       ...items,
       {
-        text: "fineline",
+        text: "grid-fineline",
         type: CardType.Text,
       },
     ];

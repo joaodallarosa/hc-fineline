@@ -1,3 +1,16 @@
 {
-  "chat": "Chat in French"
+  "menu-about": "À propos d'Hélène",
+  "menu-studio": "Le studio",
+  "menu-testimonials": "Témoignages",
+  "menu-instagram": "Instagram",
+  "menu-book": "Réserver mon tatouage",
+  "grid-brazillian": "Brésilienne",
+  "grid-tattoo": "tatoueur",
+  "grid-fineline": "ligne fine",
+  "about-title": "À propos d'Hélène",
+  "about-description": "Originaire du sud du Brésil, maintenant basée à Paris, ma spécialité est la création de tatouages aux lignes fines et délicates qui permettent aux clients de s'exprimer et de commémorer des souvenirs significatifs. Ce que j'aime le plus dans mon travail, c'est d'être en contact avec diverses personnes et de faire partie de leurs moments importants.",
+  "studio-title": "Le studio",
+  "studio-address": "28, Rue Nicolaï, 75012, Paris",
+  "studio-description": "Situé dans un centre esthétique parisien, le studio est un espace propre et serein. Ici, vous pouvez vous attendre à un cadre privé pour des expériences de tatouage individualisées. C'est un environnement tranquille où vous pouvez vous immerger complètement dans le processus de tatouage.",
+  "testimonials-title": "Témoignages"
 }

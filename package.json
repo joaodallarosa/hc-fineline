@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -15,7 +16,8 @@
     "autoprefixer": "^10.4.14",
     "nuxt": "^3.1.0",
     "postcss": "^8.4.24",
-    "tailwindcss": "^3.3.2"
+    "tailwindcss": "^3.3.2",
+    "vue-i18n": "^9.2.2"
   },
   "dependencies": {
     "@nuxt/image-edge": "^1.0.0-rc.1-28126030.07836ae",

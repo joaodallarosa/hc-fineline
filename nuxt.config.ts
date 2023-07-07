@@ -1,9 +1,9 @@
+// import { resolve, dirname } from "node:path";
+// import { fileURLToPath } from "url";
+// import VueI18nVitePlugin from "@intlify/unplugin-vue-i18n/vite";
+
 export default {
-  modules: [
-    "@nuxtjs/tailwindcss",
-    "@nuxtjs/robots",
-    "@nuxt/image",
-  ],
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/robots", "@nuxt/image"],
   nitro: {
     preset: "vercel-edge",
   },
@@ -27,4 +27,13 @@ export default {
   image: {
     // Options
   },
+  // vite: {
+  //   plugins: [
+  //     VueI18nVitePlugin({
+  //       include: [
+  //         resolve(dirname(fileURLToPath(import.meta.url)), "./locales/*.json"),
+  //       ],
+  //     }),
+  //   ],
+  // },
 };
