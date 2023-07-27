@@ -77,7 +77,7 @@ if (process.client) {
     console.log(window.innerWidth, window.innerHeight);
   });
 }
-const NUMBER_OF_PHOTOS = 15;
+const NUMBER_OF_PHOTOS = 43;
 
 enum CardType {
   Text,

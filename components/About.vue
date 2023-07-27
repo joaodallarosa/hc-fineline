@@ -17,7 +17,7 @@
       <div class="max-h-[200px] md:max-h-[600px]">
         <img
           class="w-screen h-full object-cover object-center rounded-b-lg md:rounded-r-lg md:rounded-bl-none"
-          :src="useAssets('about.png')"
+          :src="useAssets('about.jpg')"
           alt=""
         />
       </div>
