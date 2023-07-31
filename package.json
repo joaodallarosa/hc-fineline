@@ -10,13 +10,14 @@
   "devDependencies": {
     "@gtm-support/vue-gtm": "^2.0.0",
     "@nuxt/image": "^1.0.0-rc.1",
+    "@nuxtjs/i18n": "^8.0.0-rc.1",
     "@nuxtjs/tailwindcss": "^6.7.0",
     "@types/webpack-env": "^1.18.1",
     "autoprefixer": "^10.4.14",
     "nuxt": "^3.1.0",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2",
-    "vue-i18n": "^9.2.2"
+    "vue-i18n": "9.3.0-beta.24"
   },
   "dependencies": {
     "@nuxt/image-edge": "^1.0.0-rc.1-28126030.07836ae",
