@@ -7,12 +7,7 @@ export default {
   ],
   i18n: {
     strategy: 'prefix_except_default',
-    // locales: [
-    //   'en',
-    //   'fr'
-    //  ],
-    // defaultLocale: '',
-    vueI18n: './i18n.config.ts' // if you are using custom path, default 
+    vueI18n: './i18n.config.ts'
   },
   nitro: {
     preset: "vercel-edge",

@@ -17,7 +17,7 @@
             @click="openModal(item.img)"
           >
             <img
-              class="h-auto max-w-full rounded-lg"
+              class="min-h-[200px] h-auto max-w-full rounded-lg"
               v-lazy="item.img"
               alt="Tattoo Photo"
             />
@@ -65,14 +65,9 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
+import { ref } from "vue";
 import { VueFinalModal } from "vue-final-modal";
 
-if (process.client) {
-  onMounted(() => {
-    console.log(window.innerWidth, window.innerHeight);
-  });
-}
 const NUMBER_OF_PHOTOS = 43;
 
 enum CardType {
@@ -111,31 +106,14 @@ for (let i = 1; i <= NUMBER_OF_PHOTOS; i++) {
         type: CardType.Text,
       },
     ];
-    items = [
-      ...items,
-      {
-        img: useAssets("/flashes/1.png"),
-        type: CardType.Image,
-      },
-    ];
   }
 
-  if (i === 3) {
+  if (i === 4) {
     items = [
       ...items,
       {
         text: "grid-fineline",
         type: CardType.Text,
-      },
-    ];
-  }
-
-  if (i === 11) {
-    items = [
-      ...items,
-      {
-        img: useAssets("/flashes/2.png"),
-        type: CardType.Image,
       },
     ];
   }
