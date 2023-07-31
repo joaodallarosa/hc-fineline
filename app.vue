@@ -27,7 +27,7 @@
             class="h-[150px] lg:h-[300px] max-w-full border border-black rounded-lg flex items-center justify-center text-xl lg:text-3xl font-sans font-thin"
             v-if="item.type === CardType.Text"
           >
-            {{ $t(item.text) }}
+            {{ item.text }}
           </div>
         </template>
       </masonry-wall>
@@ -97,7 +97,7 @@ for (let i = 1; i <= NUMBER_OF_PHOTOS; i++) {
     items = [
       ...items,
       {
-        text: "grid-tattoo",
+        text: "tattoo artist",
         type: CardType.Text,
       },
     ];
@@ -107,7 +107,7 @@ for (let i = 1; i <= NUMBER_OF_PHOTOS; i++) {
     items = [
       ...items,
       {
-        text: "grid-brazillian",
+        text: "brazillian",
         type: CardType.Text,
       },
     ];
@@ -124,7 +124,7 @@ for (let i = 1; i <= NUMBER_OF_PHOTOS; i++) {
     items = [
       ...items,
       {
-        text: "grid-fineline",
+        text: "fineline",
         type: CardType.Text,
       },
     ];

@@ -20,37 +20,38 @@ function onWhatsappClick() {
               class="h-24"
               alt="Flowbite Logo"
             />
+            <!-- style="filter: brightness(0) invert(1)" -->
           </a>
         </div>
 
         <div
-          class="flex flex-col md:flex-row items-end lg:items-center text-white text-normal md:text-lg font-sans font-thin mt-8 lg:mt-10"
+          class="flex flex-col md:flex-row items-center text-white text-normal md:text-lg font-sans font-thin"
         >
           <a
             class="text-black my-1 px-2 md:mr-5 hover:text-white hover:bg-black"
             href="#about"
             v-smooth-scroll
-            >{{$t('menu-about')}}</a
+            >About Helena</a
           >
           <a
             class="text-black my-1 px-2 md:mr-5 hover:text-white hover:bg-black"
             href="#studio"
             v-smooth-scroll
-            >{{$t('menu-studio')}}</a
+            >The Studio</a
           >
 
           <a
             class="text-black my-1 px-2 md:mr-5 hover:text-white hover:bg-black"
             href="#testimonials"
             v-smooth-scroll
-            >{{$t('menu-testimonials')}}</a
+            >Testimonials</a
           >
 
           <a
             class="text-black my-1 px-2 md:mr-5 hover:text-white hover:bg-black"
             href="https://www.instagram.com/carvalho_helena/"
             target="_blank"
-            >{{$t('menu-instagram')}}</a
+            >Instagram</a
           >
 
           <a
@@ -90,17 +91,9 @@ function onWhatsappClick() {
                 </g>
               </g>
             </svg>
-            {{$t('menu-book')}}
+            Book my Tattoo
           </a>
         </div>
-
-        <form class="absolute right-0 top-5">
-          <!-- <label for="locale-select">{{ $t("language") }}: </label> -->
-          <select id="locale-select" class="!outline-none" v-model="$i18n.locale">
-            <option value="en">🇺🇸 english</option>
-            <option value="fr">🇫🇷 french</option>
-          </select>
-        </form>
       </div>
     </nav>
   </div>
