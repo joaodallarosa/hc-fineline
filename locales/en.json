@@ -1,3 +1,16 @@
 {
-  "chat": "Chat in English"
+  "menu-about": "About Helena",
+  "menu-studio": "The Studio",
+  "menu-testimonials": "Testimonials",
+  "menu-instagram": "Instagram",
+  "menu-book": "Book my Tattoo",
+  "grid-brazillian": "Brazillian",
+  "grid-tattoo": "tattoo artist",
+  "grid-fineline": "fineline",
+  "about-title": "About Helena",
+  "about-description": "Originally from southern Brazil, now based in Paris, my specialty is creating delicate fine line tattoos that allow clients to express themselves and commemorate meaningful memories. What I love most about my job is connecting with diverse individuals and being a part of their significant moments.",
+  "studio-title": "The Studio",
+  "studio-address": "28, Rue Nicolaï, 75012, Paris",
+  "studio-description": "Located within a Parisian esthetic center, the studio is a clean and serene space. Here, you can expect a private setting for individualized tattoo experiences. It’s a tranquil environment where you can fully immerse yourself in the tattoo process.",
+  "testimonials-title": "Testimonials"
 }

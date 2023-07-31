@@ -11,21 +11,6 @@
         :max-columns="4"
       >
         <template #default="{ item }">
-          <!-- <div
-            v-if="item.type === CardType.Image"
-            @click="openModal(item.img)"
-            class="min-h-[300px]"
-          >
-            <nuxt-img
-              fit="cover"
-              preload
-              class="h-auto max-w-full rounded-lg"
-              :src="item.img"
-              alt=""
-              loading="lazy"
-            />
-          </div> -->
-
           <div
             v-if="item.type === CardType.Image"
             class=""
@@ -88,7 +73,7 @@ if (process.client) {
     console.log(window.innerWidth, window.innerHeight);
   });
 }
-const NUMBER_OF_PHOTOS = 15;
+const NUMBER_OF_PHOTOS = 43;
 
 enum CardType {
   Text,
