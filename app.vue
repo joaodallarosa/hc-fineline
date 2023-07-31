@@ -67,10 +67,6 @@
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
 import { VueFinalModal } from "vue-final-modal";
-import { useI18n } from "vue-i18n";
-const { t } = useI18n();
-
-console.log("this", this);
 
 if (process.client) {
   onMounted(() => {
