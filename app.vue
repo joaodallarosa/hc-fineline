@@ -11,28 +11,13 @@
         :max-columns="4"
       >
         <template #default="{ item }">
-          <!-- <div
-            v-if="item.type === CardType.Image"
-            @click="openModal(item.img)"
-            class="min-h-[300px]"
-          >
-            <nuxt-img
-              fit="cover"
-              preload
-              class="h-auto max-w-full rounded-lg"
-              :src="item.img"
-              alt=""
-              loading="lazy"
-            />
-          </div> -->
-
           <div
             v-if="item.type === CardType.Image"
             class=""
             @click="openModal(item.img)"
           >
             <img
-              class="h-auto max-w-full rounded-lg"
+              class="min-h-[200px] h-auto max-w-full rounded-lg"
               v-lazy="item.img"
               alt="Tattoo Photo"
             />
@@ -42,7 +27,7 @@
             class="h-[150px] lg:h-[300px] max-w-full border border-black rounded-lg flex items-center justify-center text-xl lg:text-3xl font-sans font-thin"
             v-if="item.type === CardType.Text"
           >
-            {{ item.text }}
+            {{ $t(item.text) }}
           </div>
         </template>
       </masonry-wall>
@@ -80,15 +65,10 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
+import { ref } from "vue";
 import { VueFinalModal } from "vue-final-modal";
 
-if (process.client) {
-  onMounted(() => {
-    console.log(window.innerWidth, window.innerHeight);
-  });
-}
-const NUMBER_OF_PHOTOS = 15;
+const NUMBER_OF_PHOTOS = 43;
 
 enum CardType {
   Text,
@@ -112,7 +92,7 @@ for (let i = 1; i <= NUMBER_OF_PHOTOS; i++) {
     items = [
       ...items,
       {
-        text: "tattoo artist",
+        text: "grid-tattoo",
         type: CardType.Text,
       },
     ];
@@ -122,35 +102,18 @@ for (let i = 1; i <= NUMBER_OF_PHOTOS; i++) {
     items = [
       ...items,
       {
-        text: "brazillian",
-        type: CardType.Text,
-      },
-    ];
-    items = [
-      ...items,
-      {
-        img: useAssets("/flashes/1.png"),
-        type: CardType.Image,
-      },
-    ];
-  }
-
-  if (i === 3) {
-    items = [
-      ...items,
-      {
-        text: "fineline",
+        text: "grid-brazillian",
         type: CardType.Text,
       },
     ];
   }
 
-  if (i === 11) {
+  if (i === 4) {
     items = [
       ...items,
       {
-        img: useAssets("/flashes/2.png"),
-        type: CardType.Image,
+        text: "grid-fineline",
+        type: CardType.Text,
       },
     ];
   }

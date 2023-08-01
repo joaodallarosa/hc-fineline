@@ -1,12 +1,11 @@
+import en from "~/locales/en.json";
+import fr from "~/locales/fr.json";
+
 export default defineI18nConfig(() => ({
   legacy: false,
-  locale: "en",
+  locale: "fr",
   messages: {
-    en: {
-      welcome: "Welcome",
-    },
-    fr: {
-      welcome: "Bienvenue",
-    },
+    en,
+    fr,
   },
 }));

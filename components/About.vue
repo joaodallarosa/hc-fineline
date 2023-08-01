@@ -7,21 +7,17 @@
       <div class="flex p-10">
         <div class="mb-auto mt-auto max-w-lg max-h-[400px]">
           <h2 class="text-2xl md:text-5xl uppercase text-right">
-            About Helena
+            {{$t('about-title')}}
           </h2>
           <p class="text-lg text-right mt-5">
-            Originally from southern Brazil, now based in Paris, my specialty is
-            creating delicate fine line tattoos that allow clients to express
-            themselves and commemorate meaningful memories. What I love most
-            about my job is connecting with diverse individuals and being a part
-            of their significant moments.
+            {{$t('about-description')}}
           </p>
         </div>
       </div>
       <div class="max-h-[200px] md:max-h-[600px]">
         <img
           class="w-screen h-full object-cover object-center rounded-b-lg md:rounded-r-lg md:rounded-bl-none"
-          :src="useAssets('about.png')"
+          :src="useAssets('about.jpg')"
           alt=""
         />
       </div>
