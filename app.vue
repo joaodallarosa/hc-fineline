@@ -68,7 +68,7 @@
 import { ref } from "vue";
 import { VueFinalModal } from "vue-final-modal";
 
-const NUMBER_OF_PHOTOS = 43;
+const NUMBER_OF_PHOTOS = 47;
 
 enum CardType {
   Text,
