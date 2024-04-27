@@ -4,6 +4,7 @@ export default {
     "@nuxtjs/robots",
     "@nuxt/image",
     "@nuxtjs/i18n",
+    "@nuxt/content"
   ],
   i18n: {
     strategy: 'prefix_except_default',

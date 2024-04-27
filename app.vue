@@ -1,124 +1,10 @@
 <template>
   <div class="text-center font-sans font-thin">
-    <Menu />
-
-    <div class="pt-32 lg:pt-30 px-8" id="home">
-      <masonry-wall
-        :items="items"
-        :column-width="150"
-        :gap="10"
-        :min-columns="2"
-        :max-columns="4"
-      >
-        <template #default="{ item }">
-          <div
-            v-if="item.type === CardType.Image"
-            class=""
-            @click="openModal(item.img)"
-          >
-            <img
-              class="min-h-[200px] h-auto max-w-full rounded-lg"
-              v-lazy="item.img"
-              alt="Tattoo Photo"
-            />
-          </div>
-
-          <div
-            class="h-[150px] lg:h-[300px] max-w-full border border-black rounded-lg flex items-center justify-center text-xl lg:text-3xl font-sans font-thin"
-            v-if="item.type === CardType.Text"
-          >
-            {{ $t(item.text) }}
-          </div>
-        </template>
-      </masonry-wall>
-    </div>
-
-    <About />
-
-    <Studio />
-
-    <Testimonials />
-
-    <VueFinalModal
-      v-model="show"
-      class="confirm-modal"
-      content-class="bg-amber-50 rounded-lg"
-      overlay-transition="vfm-fade"
-      content-transition="vfm-fade"
-    >
-      <div @click="closeModal">
-        <img
-          class="h-auto max-h-[90vh] max-w-full rounded-lg"
-          v-lazy="modalImage"
-          alt=""
-        />
-      </div>
-      <slot />
-    </VueFinalModal>
+    <NuxtPage />
   </div>
-  <img
-    height="1"
-    width="1"
-    style="display: none"
-    src="https://www.facebook.com/tr?id=1306111036657039&ev=PageView&noscript=1"
-  />
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { VueFinalModal } from "vue-final-modal";
-
-const NUMBER_OF_PHOTOS = 47;
-
-enum CardType {
-  Text,
-  Image,
-}
-
-let items: any[] = [];
-let show = ref(false);
-let modalImage = new URL(`./assets/images/tattoos/1.jpg`, import.meta.url).href;
-
-for (let i = 1; i <= NUMBER_OF_PHOTOS; i++) {
-  items = [
-    ...items,
-    {
-      img: useAssets(`minified/${i}.jpg`),
-      type: CardType.Image,
-    },
-  ];
-
-  if (i === 2) {
-    items = [
-      ...items,
-      {
-        text: "grid-tattoo",
-        type: CardType.Text,
-      },
-    ];
-  }
-
-  if (i === 3) {
-    items = [
-      ...items,
-      {
-        text: "grid-brazillian",
-        type: CardType.Text,
-      },
-    ];
-  }
-
-  if (i === 4) {
-    items = [
-      ...items,
-      {
-        text: "grid-fineline",
-        type: CardType.Text,
-      },
-    ];
-  }
-}
-
 useHead({
   meta: [
     {
@@ -162,15 +48,6 @@ useHead({
     },
   ],
 });
-
-function openModal(img: string) {
-  modalImage = img;
-  show.value = true;
-}
-
-function closeModal() {
-  show.value = false;
-}
 </script>
 
 <style>
@@ -209,5 +86,30 @@ body {
 }
 .dark .confirm-modal-content {
   background: #000;
+}
+
+.flip-list-move {
+  transition: transform 0.5s;
+}
+
+.no-move {
+  transition: transform 0s;
+}
+
+.ghost {
+  opacity: 0.5;
+  background: red;
+}
+
+.list-group {
+  min-height: 20px;
+}
+
+.list-group-item {
+  cursor: move;
+}
+
+.list-group-item i {
+  cursor: pointer;
 }
 </style>
