@@ -41,7 +41,7 @@ let images = ref(
   Object.entries(glob).map(([value, module], index) => {
     return {
       order: index,
-      src: `/_nuxt/${value}`,
+      src: `/_nuxt${value}`,
     };
   })
 );

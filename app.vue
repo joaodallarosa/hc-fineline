@@ -44,7 +44,13 @@ useHead({
   link: [
     {
       rel: "icon",
-      href: "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧡</text></svg>",
+      type: "image/svg+xml",
+      href: "/_nuxt/assets/img/favicon.svg",
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      href: "/_nuxt/assets/img/favicon.png",
     },
   ],
 });
@@ -54,62 +60,5 @@ useHead({
 body {
   background: #f2e8d6;
   font-family: Geosans;
-}
-
-.masonry-item {
-  min-height: 100px;
-}
-
-.confirm-modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.confirm-modal-content {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  background: #fff;
-  border-radius: 0.5rem;
-}
-.confirm-modal-content > * + * {
-  margin: 0.5rem 0;
-}
-.confirm-modal-content h1 {
-  font-size: 1.375rem;
-}
-.confirm-modal-content button {
-  margin: 0.25rem 0 0 auto;
-  padding: 0 8px;
-  border: 1px solid;
-  border-radius: 0.5rem;
-}
-.dark .confirm-modal-content {
-  background: #000;
-}
-
-.flip-list-move {
-  transition: transform 0.5s;
-}
-
-.no-move {
-  transition: transform 0s;
-}
-
-.ghost {
-  opacity: 0.5;
-  background: red;
-}
-
-.list-group {
-  min-height: 20px;
-}
-
-.list-group-item {
-  cursor: move;
-}
-
-.list-group-item i {
-  cursor: pointer;
 }
 </style>
