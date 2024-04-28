@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@nuxtjs/robots": "^3.0.0",
+    "@vercel/analytics": "^1.2.2",
     "@yeger/vue-masonry-wall": "5.0.10",
     "nuxt-facebook-pixel-module": "^1.6.0",
     "vue-final-modal": "^4.4.2",

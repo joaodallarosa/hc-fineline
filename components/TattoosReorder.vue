@@ -1,6 +1,7 @@
 <template>
   <div class="pt-32 lg:pt-30 px-8" id="home">
     <button @click="saveToJson">Export to JSON</button>
+    <button @click="cleanJson">Clean JSON</button>
     <draggable
       v-model="images"
       item-key="id"
@@ -20,7 +21,7 @@
         <li class="list-group-item">
           <div class="bg-white rounded shadow-md">
             <img
-              class="w-full h-[400px] object-cover mb-2"
+              class="w-full h-[200px] object-cover mb-2"
               v-lazy="element.src"
               alt="Tattoo Photo"
             />
@@ -37,14 +38,21 @@ import { filename } from "pathe/utils";
 import draggable from "vuedraggable";
 
 const glob = import.meta.glob("~/assets/img/minified/*.jpg", { eager: true });
-let images = ref(
-  Object.entries(glob).map(([value, module], index) => {
-    return {
-      order: index,
-      src: `/_nuxt${value}`,
-    };
-  })
-);
+const imageFiles = Object.entries(glob).map(([value, module], index) => {
+  return {
+    order: index,
+    src: useAssets(value),
+  };
+});
+console.log('image files', imageFiles)
+const imagesConfig = await queryContent("/tattoo-grid").findOne();
+const images = ref([
+  ...imagesConfig.body,
+  ...imageFiles.filter(
+    (fileItem) =>
+      !imagesConfig.body.some((configItem) => configItem.src === fileItem.src)
+  ),
+]);
 
 const dragOptions = computed(() => {
   return {
@@ -68,8 +76,14 @@ function closeModal() {
 }
 
 function saveToJson() {
-  console.log("BEFORE:", images.value);
   console.log("EXPORTED:", JSON.stringify(images.value));
+}
+
+function cleanJson() {
+  images.value = images.value.filter((item) =>
+    imageFiles.some((fileItem) => fileItem.src === item.src)
+  );
+  saveToJson();
 }
 </script>
 

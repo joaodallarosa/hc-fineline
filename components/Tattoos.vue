@@ -77,7 +77,9 @@ let loadedMore = ref(false);
 let modalImage = new URL(`./assets/images/tattoos/1.jpg`, import.meta.url).href;
 
 const teste = await queryContent("/tattoo-grid").findOne();
-const images = teste.body;
+const images = teste.body.map((item) => {
+  return { src: useAssets(item.src) };
+});
 let displayedImages = ref(images.slice(0, 6));
 
 function openModal(src: string) {

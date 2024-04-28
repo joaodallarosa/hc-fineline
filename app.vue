@@ -45,12 +45,12 @@ useHead({
     {
       rel: "icon",
       type: "image/svg+xml",
-      href: "/_nuxt/assets/img/favicon.svg",
+      href: useAssets("/_nuxt/assets/img/favicon.svg"),
     },
     {
       rel: "icon",
       type: "image/png",
-      href: "/_nuxt/assets/img/favicon.png",
+      href: useAssets("/_nuxt/assets/img/favicon.png"),
     },
   ],
 });
