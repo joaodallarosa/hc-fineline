@@ -8,7 +8,7 @@ function onWhatsappClick() {
 </script>
 
 <template>
-  <div class="w-full fixed px-8 bg-[#f2e8d6]">
+  <div class="w-full fixed px-8 bg-[#f2e8d6] z-10">
     <nav class="relative z-10">
       <div
         class="relative z-10 mx-auto w-full xl:px-0 flex justify-between items-center py-4"
@@ -30,34 +30,34 @@ function onWhatsappClick() {
             class="text-black my-1 px-2 md:mr-5 hover:text-white hover:bg-black"
             href="#about"
             v-smooth-scroll
-            >{{$t('menu-about')}}</a
+            >{{ $t("menu-about") }}</a
           >
           <a
             class="text-black my-1 px-2 md:mr-5 hover:text-white hover:bg-black"
             href="#studio"
             v-smooth-scroll
-            >{{$t('menu-studio')}}</a
+            >{{ $t("menu-studio") }}</a
           >
 
           <a
             class="text-black my-1 px-2 md:mr-5 hover:text-white hover:bg-black"
             href="#testimonials"
             v-smooth-scroll
-            >{{$t('menu-testimonials')}}</a
+            >{{ $t("menu-testimonials") }}</a
           >
 
           <a
             class="text-black my-1 px-2 md:mr-5 hover:text-white hover:bg-black"
             href="https://www.instagram.com/carvalho_helena/"
             target="_blank"
-            >{{$t('menu-instagram')}}</a
+            >{{ $t("menu-instagram") }}</a
           >
 
           <a
             target="_blank"
             @click="onWhatsappClick()"
             href="https://wa.me/message/OXUF5MYCLX3QH1"
-            class="px-4 py-2 bg-black text-white text-lg font-sans font-normal items-center justify-center fixed lg:static top-[80vh] flex right-8"
+            class="px-4 py-2 bg-black text-white text-lg font-sans font-normal items-center justify-center fixed lg:static top-[85vh] flex right-8"
           >
             <svg
               class="mr-2"
@@ -90,13 +90,17 @@ function onWhatsappClick() {
                 </g>
               </g>
             </svg>
-            {{$t('menu-book')}}
+            {{ $t("menu-book") }}
           </a>
         </div>
 
         <form class="absolute right-0 top-5">
           <!-- <label for="locale-select">{{ $t("language") }}: </label> -->
-          <select id="locale-select" class="!outline-none" v-model="$i18n.locale">
+          <select
+            id="locale-select"
+            class="!outline-none"
+            v-model="$i18n.locale"
+          >
             <option value="en">🇺🇸 english</option>
             <option value="fr">🇫🇷 french</option>
           </select>

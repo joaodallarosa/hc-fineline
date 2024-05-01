@@ -1,124 +1,10 @@
 <template>
   <div class="text-center font-sans font-thin">
-    <Menu />
-
-    <div class="pt-32 lg:pt-30 px-8" id="home">
-      <masonry-wall
-        :items="items"
-        :column-width="150"
-        :gap="10"
-        :min-columns="2"
-        :max-columns="4"
-      >
-        <template #default="{ item }">
-          <div
-            v-if="item.type === CardType.Image"
-            class=""
-            @click="openModal(item.img)"
-          >
-            <img
-              class="min-h-[200px] h-auto max-w-full rounded-lg"
-              v-lazy="item.img"
-              alt="Tattoo Photo"
-            />
-          </div>
-
-          <div
-            class="h-[150px] lg:h-[300px] max-w-full border border-black rounded-lg flex items-center justify-center text-xl lg:text-3xl font-sans font-thin"
-            v-if="item.type === CardType.Text"
-          >
-            {{ $t(item.text) }}
-          </div>
-        </template>
-      </masonry-wall>
-    </div>
-
-    <About />
-
-    <Studio />
-
-    <Testimonials />
-
-    <VueFinalModal
-      v-model="show"
-      class="confirm-modal"
-      content-class="bg-amber-50 rounded-lg"
-      overlay-transition="vfm-fade"
-      content-transition="vfm-fade"
-    >
-      <div @click="closeModal">
-        <img
-          class="h-auto max-h-[90vh] max-w-full rounded-lg"
-          v-lazy="modalImage"
-          alt=""
-        />
-      </div>
-      <slot />
-    </VueFinalModal>
+    <NuxtPage />
   </div>
-  <img
-    height="1"
-    width="1"
-    style="display: none"
-    src="https://www.facebook.com/tr?id=1306111036657039&ev=PageView&noscript=1"
-  />
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { VueFinalModal } from "vue-final-modal";
-
-const NUMBER_OF_PHOTOS = 47;
-
-enum CardType {
-  Text,
-  Image,
-}
-
-let items: any[] = [];
-let show = ref(false);
-let modalImage = new URL(`./assets/images/tattoos/1.jpg`, import.meta.url).href;
-
-for (let i = 1; i <= NUMBER_OF_PHOTOS; i++) {
-  items = [
-    ...items,
-    {
-      img: useAssets(`minified/${i}.jpg`),
-      type: CardType.Image,
-    },
-  ];
-
-  if (i === 2) {
-    items = [
-      ...items,
-      {
-        text: "grid-tattoo",
-        type: CardType.Text,
-      },
-    ];
-  }
-
-  if (i === 3) {
-    items = [
-      ...items,
-      {
-        text: "grid-brazillian",
-        type: CardType.Text,
-      },
-    ];
-  }
-
-  if (i === 4) {
-    items = [
-      ...items,
-      {
-        text: "grid-fineline",
-        type: CardType.Text,
-      },
-    ];
-  }
-}
-
 useHead({
   meta: [
     {
@@ -158,56 +44,21 @@ useHead({
   link: [
     {
       rel: "icon",
-      href: "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧡</text></svg>",
+      type: "image/svg+xml",
+      href: useAssets("/_nuxt/assets/img/favicon.svg"),
+    },
+    {
+      rel: "icon",
+      type: "image/png",
+      href: useAssets("/_nuxt/assets/img/favicon.png"),
     },
   ],
 });
-
-function openModal(img: string) {
-  modalImage = img;
-  show.value = true;
-}
-
-function closeModal() {
-  show.value = false;
-}
 </script>
 
 <style>
 body {
   background: #f2e8d6;
   font-family: Geosans;
-}
-
-.masonry-item {
-  min-height: 100px;
-}
-
-.confirm-modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.confirm-modal-content {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  background: #fff;
-  border-radius: 0.5rem;
-}
-.confirm-modal-content > * + * {
-  margin: 0.5rem 0;
-}
-.confirm-modal-content h1 {
-  font-size: 1.375rem;
-}
-.confirm-modal-content button {
-  margin: 0.25rem 0 0 auto;
-  padding: 0 8px;
-  border: 1px solid;
-  border-radius: 0.5rem;
-}
-.dark .confirm-modal-content {
-  background: #000;
 }
 </style>
