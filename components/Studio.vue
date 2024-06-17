@@ -13,26 +13,26 @@
         >{{ $t("studio-address") }}</a
       >
     </p>
-    <p class="text-center mt-5 text-lg">
+    <p class="text-center mt-5 text-lg text-justify">
       {{ $t("studio-description") }}
     </p>
 
-    <div class="container flex flex-col justify-center p-4 mx-auto">
+    <div class="container flex flex-col justify-center py-4 mx-auto">
       <div class="grid grid-cols-1 gap-4 lg:grid-cols-4 sm:grid-cols-2">
         <img
-          class="object-cover w-full dark:bg-gray-500 aspect-square"
+          class="object-cover w-full dark:bg-gray-500 aspect-square rounded-lg"
           :src="useAssets('studio/studio_1.jpg')"
         />
         <img
-          class="object-cover w-full dark:bg-gray-500 aspect-square"
+          class="object-cover w-full dark:bg-gray-500 aspect-square rounded-lg"
           :src="useAssets('studio/studio_2.jpg')"
         />
         <img
-          class="object-cover w-full dark:bg-gray-500 aspect-square"
+          class="object-cover w-full dark:bg-gray-500 aspect-square rounded-lg"
           :src="useAssets('studio/studio_3.jpg')"
         />
         <img
-          class="object-cover w-full dark:bg-gray-500 aspect-square"
+          class="object-cover w-full dark:bg-gray-500 aspect-square rounded-lg"
           :src="useAssets('studio/studio_4.jpg')"
         />
       </div>
@@ -40,24 +40,3 @@
   </section>
 </template>
 
-<script setup lang="ts">
-// import { ref, computed } from "vue";
-// import { filename } from "pathe/utils";
-// import draggable from "vuedraggable";
-
-// const glob = import.meta.glob("~/assets/img/studio/*.jpg", { eager: true });
-// const imageFiles = Object.entries(glob).map(([value, module], index) => {
-//   return {
-//     src: useAssets(value),
-//   };
-// });
-// console.log("Studio image files", imageFiles);
-// const images = ref(imageFiles);
-// const imagesConfig = await queryContent("/tattoo-grid").findOne();
-// const images = ref([
-//   ...imageFiles.filter(
-//     (fileItem) =>
-//       !imagesConfig.body.some((configItem) => configItem.src === fileItem.src)
-//   ),
-// ]);
-</script>
