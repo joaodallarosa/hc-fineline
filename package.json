@@ -8,6 +8,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@dargmuesli/nuxt-cookie-control": "^8.4.5",
     "@gtm-support/vue-gtm": "^2.0.0",
     "@nuxt/content": "^2.12.1",
     "@nuxt/image": "1.2.0",

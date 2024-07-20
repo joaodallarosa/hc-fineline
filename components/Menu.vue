@@ -1,8 +1,7 @@
 <script setup>
 function onWhatsappClick() {
   gtag("event", "conversion", {
-    send_to: "AW-11226818775/wJ7LCKfgjrYYENfRrukp",
-    // 'event_callback': callback
+    send_to: "AW-11226818775/wJ7LCKfgjrYYENfRrukp"
   });
 }
 </script>
@@ -95,7 +94,6 @@ function onWhatsappClick() {
         </div>
 
         <form class="absolute right-0 top-5">
-          <!-- <label for="locale-select">{{ $t("language") }}: </label> -->
           <select
             id="locale-select"
             class="!outline-none"
