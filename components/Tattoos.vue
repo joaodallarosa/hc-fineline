@@ -61,7 +61,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeMount, reactive } from "vue";
+import { ref } from "vue";
 import { VueFinalModal } from "vue-final-modal";
 
 const { isMobile, isDesktop, isTablet } = useDevice();
