@@ -1,5 +1,5 @@
 <script setup>
-const NUMBER_OF_PHOTOS = 16;
+const NUMBER_OF_PHOTOS = 19;
 let items = [];
 
 for (let i = 1; i <= NUMBER_OF_PHOTOS; i++) {
