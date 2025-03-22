@@ -1,4 +1,6 @@
-export default {
+import { defineNuxtConfig } from "nuxt/config";
+
+export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxtjs/robots",
@@ -77,20 +79,27 @@ export default {
   },
   build: {
     // transpile: ["vue-resizer"],
-    postcss: {
-      postcssOptions: {
-        plugins: {
-          tailwindcss: {},
-          autoprefixer: {},
-        },
-      },
-    },
-    compilerOptions: {
-      types: ["node", "webpack-env"],
-    },
+    // postcss: {
+    //   postcssOptions: {
+    //     plugins: {
+    //       tailwindcss: {},
+    //       autoprefixer: {},
+    //     },
+    //   },
+    // },
+    // compilerOptions: {
+    //   types: ["node", "webpack-env"],
+    // },
   },
   css: ["@/assets/css/tailwind.css", "vue-final-modal/style.css"],
-  head: {
-    title: "Helena de Carvalho | Fineline Tattoo",
+  // head: {
+  //   title: "Helena de Carvalho | Fineline Tattoo",
+  // },
+  vite: {
+    build: {
+      rollupOptions: {
+        plugins: [],
+      },
+    },
   },
-};
+});
