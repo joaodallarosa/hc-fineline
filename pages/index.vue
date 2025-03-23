@@ -1,5 +1,6 @@
 <template>
   <div class="relative">
+    <h2 class="text-3xl font-bold border-2 border-red-700 mb-10">Build Test</h2>
     <Menu />
 
     <Tattoos />

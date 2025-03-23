@@ -67,16 +67,12 @@ export default {
     strategy: "prefix_except_default",
     vueI18n: "./i18n.config.ts",
   },
+  ssr: false,
+  target: "static",
   nitro: {
-    preset: "vercel-edge",
-    // wasm: {
-    //   rollup: {
-    //     targetEnv: "browser",
-    //   },
-    // },
+    preset: "vercel",
   },
   build: {
-    // transpile: ["vue-resizer"],
     postcss: {
       postcssOptions: {
         plugins: {
