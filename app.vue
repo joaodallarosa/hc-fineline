@@ -52,9 +52,9 @@ const {
 } = useCookieControl();
 
 onMounted(() => {
-  if (cookiesEnabledIds.value?.length){
+  if (import.meta.server && cookiesEnabledIds.value?.length){
     onConsentGranted()
-  } 
+  }
 })
 
 watch(
@@ -65,7 +65,7 @@ watch(
       current?.includes("analytics")
     ) {
       onConsentGranted()
-    } 
+    }
     if (
       previous?.includes("analytics") &&
       !current?.includes("analytics")
@@ -77,7 +77,7 @@ watch(
       current?.includes("marketing")
     ) {
       onConsentGranted()
-    } 
+    }
     if (
       previous?.includes("marketing") &&
       !current?.includes("marketing")
