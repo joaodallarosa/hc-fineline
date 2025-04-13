@@ -65,13 +65,18 @@ export default defineNuxtConfig({
       },
     ],
   ],
+
   i18n: {
     strategy: "prefix_except_default",
     vueI18n: "./i18n.config.ts",
   },
+
   ssr: false,
+
   nitro: {
     preset: "vercel",
   },
+
   css: ["@/assets/css/tailwind.css", "vue-final-modal/style.css"],
+  compatibilityDate: "2025-04-13",
 });
