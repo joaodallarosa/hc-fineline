@@ -1,6 +1,7 @@
 {
   "private": true,
   "scripts": {
+    "generate-images": "node scripts/generate-image-list.js",
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",

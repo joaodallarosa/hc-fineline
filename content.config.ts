@@ -14,5 +14,12 @@ export default defineContentConfig({
         ),
       }),
     }),
+    testimonials: defineCollection({
+      type: "data",
+      source: "testimonials.json",
+      schema: z.object({
+        body: z.array(z.string()),
+      }),
+    }),
   },
 });

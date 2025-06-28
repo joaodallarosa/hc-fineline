@@ -1,6 +1,5 @@
 <script setup>
-const { data: images } = await useFetch("/api/testimonials-images");
-console.log('fetched data:', images.value)
+const { body: images } = await queryCollection("testimonials").first();
 </script>
 
 <template>
