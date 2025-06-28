@@ -1,5 +1,6 @@
 <script setup>
 const { data: images } = await useFetch("/api/testimonials-images");
+console.log('fetched data:', images.value)
 </script>
 
 <template>
