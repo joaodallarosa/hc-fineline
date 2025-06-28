@@ -71,8 +71,6 @@ export default defineNuxtConfig({
     vueI18n: "./i18n.config.ts",
   },
 
-  ssr: false,
-
   nitro: {
     preset: "vercel",
   },
