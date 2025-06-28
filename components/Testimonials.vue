@@ -1,15 +1,5 @@
 <script setup>
-const NUMBER_OF_PHOTOS = 19;
-let items = [];
-
-for (let i = 1; i <= NUMBER_OF_PHOTOS; i++) {
-  items = [
-    ...items,
-    {
-      img: useAssets(`testimonial_${i}.jpg`),
-    },
-  ];
-}
+const { data: images } = await useFetch("/api/testimonials-images");
 </script>
 
 <template>
@@ -19,18 +9,19 @@ for (let i = 1; i <= NUMBER_OF_PHOTOS; i++) {
     </h2>
     <div class="pt-5 lg:pt-10 px-8" id="home">
       <masonry-wall
-        :items="items"
+        :items="images"
         :column-width="150"
         :gap="10"
         :min-columns="2"
         :max-columns="3"
       >
-        <template #default="{ item }">
+        <template #default="{ item: image }">
           <div>
-            <img
+            <NuxtImg
               class="h-auto max-w-full rounded-lg"
-              v-lazy="item.img"
+              :src="image"
               alt="Tattoo Photo"
+              loading="lazy"
             />
           </div>
         </template>

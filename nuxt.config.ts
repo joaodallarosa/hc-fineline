@@ -5,7 +5,6 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/robots",
     "@nuxt/image",
-    "@nuxtjs/i18n",
     "@nuxt/content",
     "@nuxtjs/device",
     [
@@ -65,11 +64,6 @@ export default defineNuxtConfig({
       },
     ],
   ],
-
-  i18n: {
-    strategy: "prefix_except_default",
-    vueI18n: "./i18n.config.ts",
-  },
 
   nitro: {
     preset: "vercel",

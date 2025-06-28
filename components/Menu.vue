@@ -15,7 +15,7 @@ function onWhatsappClick() {
         <div>
           <a href="#home" v-smooth-scroll class="flex items-center">
             <img
-              :src="useAssets('logo.png')"
+              src="/img/logo.png"
               class="h-24"
               alt="Flowbite Logo"
             />
