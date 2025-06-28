@@ -18,7 +18,7 @@
     "@types/webpack-env": "^1.18.1",
     "autoprefixer": "^10.4.14",
     "ipx": "^3.0.1",
-    "nuxi": "^3.11.1",
+    "nuxi": "^3.25.1",
     "nuxt": "^3.17.5",
     "postcss": "^8.4.24",
     "tailwindcss": "^3.3.2",
