@@ -4,7 +4,7 @@
 
     <Tattoos />
 
-    <!-- <tattoos-reorder /> -->
+    <!-- <TattoosReorder /> -->
 
     <About />
 

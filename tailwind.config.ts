@@ -8,20 +8,11 @@ module.exports = {
     "./plugins/**/*.{js,ts}",
     "./nuxt.config.{js,ts}",
   ],
-  // theme: {
-  //   extend: {},
-  // },
   theme: {
     extend: {
       fontFamily: {
-        geosans: ["Geosans", "sans-serif"],
+        sans: ["Roboto", "sans-serif"],
       },
-      scale: {
-        "-100": "-1",
-      },
-      height: {
-        "-almost": "95vh"
-      }
     },
   },
   plugins: [],

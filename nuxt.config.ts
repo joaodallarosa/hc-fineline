@@ -5,7 +5,6 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "@nuxtjs/robots",
     "@nuxt/image",
-    "@nuxtjs/i18n",
     "@nuxt/content",
     "@nuxtjs/device",
     [
@@ -64,19 +63,11 @@ export default defineNuxtConfig({
         },
       },
     ],
+    "@nuxt/fonts",
   ],
-
-  i18n: {
-    strategy: "prefix_except_default",
-    vueI18n: "./i18n.config.ts",
-  },
-
-  ssr: false,
-
   nitro: {
     preset: "vercel",
   },
-
   css: ["@/assets/css/tailwind.css", "vue-final-modal/style.css"],
   compatibilityDate: "2025-04-13",
 });

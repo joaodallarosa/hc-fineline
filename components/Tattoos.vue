@@ -1,3 +1,37 @@
+<script setup lang="ts">
+import { ref } from "vue";
+import { VueFinalModal } from "vue-final-modal";
+
+const { isMobile, isDesktop, isTablet } = useDevice();
+
+let gridColumns = 1;
+if (!isMobile) {
+  gridColumns = 2;
+}
+
+let loadedTattoos = ref(false);
+let show = ref(false);
+let loadedMore = ref(false);
+let modalImage = new URL(`./assets/images/tattoos/1.jpg`, import.meta.url).href;
+
+const tattoos = await queryCollection("tattoos").first();
+const images = tattoos.body;
+let displayedImages = ref(images.slice(0, 6));
+
+function openModal(src: string) {
+  modalImage = src;
+  show.value = true;
+}
+
+function closeModal() {
+  show.value = false;
+}
+
+function loadMoreTattoos() {
+  displayedImages.value = images;
+  loadedMore = true;
+}
+</script>
 <template>
   <div
     class="tattoos pt-[200px] md:pt-[150px] lg:pt-32 px-8 relative"
@@ -17,16 +51,20 @@
           :style="{ 'padding-top': '76%' }"
           @click="openModal(item.src)"
         >
-          <img
+          <NuxtImg
             v-if="index <= 3"
             class="absolute inset-0 w-full h-full object-cover rounded-lg"
             :src="item.src"
             alt="Tattoo Photo"
+            sizes="100vw sm:50vw md:400px"
+            preload
           />
-          <img
+          <NuxtImg
             v-else
             class="absolute inset-0 w-full h-full object-cover rounded-lg"
-            v-lazy="{ src: item.src }"
+            :src="item.src"
+            loading="lazy"
+            sizes="100vw sm:50vw md:400px"
             alt="Tattoo Photo"
           />
         </div>
@@ -49,54 +87,16 @@
       content-transition="vfm-fade"
     >
       <div @click="closeModal">
-        <img
+        <NuxtImg
           class="h-auto max-h-[90vh] max-w-full rounded-lg"
-          v-lazy="modalImage"
-          alt=""
+          :src="modalImage"
+          alt="Tattoo Photo"
         />
       </div>
       <slot />
     </VueFinalModal>
   </div>
 </template>
-
-<script setup lang="ts">
-import { ref } from "vue";
-import { VueFinalModal } from "vue-final-modal";
-
-const { isMobile, isDesktop, isTablet } = useDevice();
-
-let gridColumns = 1;
-if (!isMobile) {
-  gridColumns = 2;
-}
-
-let loadedTattoos = ref(false);
-let show = ref(false);
-let loadedMore = ref(false);
-let modalImage = new URL(`./assets/images/tattoos/1.jpg`, import.meta.url).href;
-
-const teste = await queryContent("/tattoo-grid").findOne();
-const images = teste.body.map((item) => {
-  return { src: useAssets(item.src) };
-});
-let displayedImages = ref(images.slice(0, 6));
-
-function openModal(src: string) {
-  modalImage = src;
-  show.value = true;
-}
-
-function closeModal() {
-  show.value = false;
-}
-
-function loadMoreTattoos() {
-  displayedImages.value = images;
-  loadedMore = true;
-}
-</script>
-
 <style>
 .tattoos {
   z-index: 0;

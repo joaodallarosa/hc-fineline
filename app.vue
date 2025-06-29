@@ -14,34 +14,34 @@
 import { onMounted } from "vue";
 
 const onConsentGranted = () => {
-  const updateObj =  {
+  const updateObj = {
     ...(cookiesEnabledIds.value?.includes("analytics") && {
-      analytics_storage: 'granted'
+      analytics_storage: "granted",
     }),
     ...(cookiesEnabledIds.value?.includes("marketing") && {
-      ad_user_data: 'granted',
-      ad_personalization: 'granted',
-      ad_storage: 'granted',
-    })
-  }
-  gtag('consent', 'update', updateObj);
-  if (cookiesEnabledIds.value?.includes("analytics")) fbq('consent', 'grant')
-}
+      ad_user_data: "granted",
+      ad_personalization: "granted",
+      ad_storage: "granted",
+    }),
+  };
+  gtag("consent", "update", updateObj);
+  if (cookiesEnabledIds.value?.includes("analytics")) fbq("consent", "grant");
+};
 
 const onConsentDenied = () => {
-  const updateObj =  {
+  const updateObj = {
     ...(!cookiesEnabledIds.value?.includes("analytics") && {
-      analytics_storage: 'denied'
+      analytics_storage: "denied",
     }),
     ...(!cookiesEnabledIds.value?.includes("marketings") && {
-      ad_user_data: 'denied',
-      ad_personalization: 'denied',
-      ad_storage: 'denied',
-    })
-  }
-  gtag('consent', 'update', updateObj);
-  if (cookiesEnabledIds.value?.includes("analytics")) fbq('consent', 'revoke')
-}
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      ad_storage: "denied",
+    }),
+  };
+  gtag("consent", "update", updateObj);
+  if (cookiesEnabledIds.value?.includes("analytics")) fbq("consent", "revoke");
+};
 
 const {
   cookiesEnabled,
@@ -52,37 +52,25 @@ const {
 } = useCookieControl();
 
 onMounted(() => {
-  if (import.meta.server && cookiesEnabledIds.value?.length){
-    onConsentGranted()
+  if (import.meta.server && cookiesEnabledIds.value?.length) {
+    onConsentGranted();
   }
-})
+});
 
 watch(
   () => cookiesEnabledIds.value,
   (current, previous) => {
-    if (
-      !previous?.includes("analytics") &&
-      current?.includes("analytics")
-    ) {
-      onConsentGranted()
+    if (!previous?.includes("analytics") && current?.includes("analytics")) {
+      onConsentGranted();
     }
-    if (
-      previous?.includes("analytics") &&
-      !current?.includes("analytics")
-      ) {
-      onConsentDenied()
+    if (previous?.includes("analytics") && !current?.includes("analytics")) {
+      onConsentDenied();
     }
-    if (
-      !previous?.includes("marketing") &&
-      current?.includes("marketing")
-    ) {
-      onConsentGranted()
+    if (!previous?.includes("marketing") && current?.includes("marketing")) {
+      onConsentGranted();
     }
-    if (
-      previous?.includes("marketing") &&
-      !current?.includes("marketing")
-      ) {
-      onConsentDenied()
+    if (previous?.includes("marketing") && !current?.includes("marketing")) {
+      onConsentDenied();
     }
   },
   { deep: true }
@@ -136,12 +124,12 @@ useHead({
     {
       rel: "icon",
       type: "image/svg+xml",
-      href: useAssets("/_nuxt/assets/img/favicon.svg"),
+      href: "/img/favicon.svg",
     },
     {
       rel: "icon",
       type: "image/png",
-      href: useAssets("/_nuxt/assets/img/favicon.png"),
+      href: "/img/favicon.png",
     },
   ],
 });
@@ -150,7 +138,6 @@ useHead({
 <style>
 body {
   background: #f2e8d6;
-  font-family: Geosans;
 }
 
 .cookieControl__ModalContent {

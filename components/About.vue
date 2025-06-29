@@ -7,7 +7,7 @@
       <div class="relative md:order-2 min-h-[300px] md:min-h-[500px]">
         <img
           class="w-full h-full object-cover object-center rounded-lg absolute top-0 left-0"
-          :src="useAssets('helena/helena.jpg')"
+          src="/img/helena/helena.jpg"
           alt=""
         />
       </div>
