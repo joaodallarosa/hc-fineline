@@ -63,12 +63,11 @@ export default defineNuxtConfig({
         },
       },
     ],
+    "@nuxt/fonts",
   ],
-
   nitro: {
     preset: "vercel",
   },
-
   css: ["@/assets/css/tailwind.css", "vue-final-modal/style.css"],
   compatibilityDate: "2025-04-13",
 });

@@ -56,6 +56,7 @@ function loadMoreTattoos() {
             class="absolute inset-0 w-full h-full object-cover rounded-lg"
             :src="item.src"
             alt="Tattoo Photo"
+            sizes="100vw sm:50vw md:400px"
             preload
           />
           <NuxtImg
@@ -63,6 +64,7 @@ function loadMoreTattoos() {
             class="absolute inset-0 w-full h-full object-cover rounded-lg"
             :src="item.src"
             loading="lazy"
+            sizes="100vw sm:50vw md:400px"
             alt="Tattoo Photo"
           />
         </div>

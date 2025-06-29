@@ -138,7 +138,6 @@ useHead({
 <style>
 body {
   background: #f2e8d6;
-  font-family: Geosans;
 }
 
 .cookieControl__ModalContent {

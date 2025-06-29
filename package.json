@@ -12,6 +12,7 @@
     "@dargmuesli/nuxt-cookie-control": "^8.4.5",
     "@gtm-support/vue-gtm": "^2.0.0",
     "@nuxt/content": "^3.6.1",
+    "@nuxt/fonts": "^0.11.4",
     "@nuxt/image": "1.2.0",
     "@nuxtjs/device": "^3.1.1",
     "@nuxtjs/tailwindcss": "^6.12.0",
