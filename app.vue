@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center font-sans font-thin">
+  <div class="text-center font-body" id="background">
     <NuxtPage />
     <CookieControl :locale="$i18n.locale">
       <template #modal>

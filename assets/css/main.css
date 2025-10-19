@@ -1,0 +1,11 @@
+/* If you write something like this: */
+.font-header {
+  /* font-family: "Libre Caslon Text"; */
+  /* font-family: "Fleur De Leah"; */
+  /* font-family: Tangerine; */
+  font-family: "Fredericka the Great";
+}
+
+.font-body {
+  font-family: "Funnel Display";
+}

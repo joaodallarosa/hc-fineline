@@ -68,6 +68,6 @@ export default defineNuxtConfig({
   nitro: {
     preset: "vercel",
   },
-  css: ["@/assets/css/tailwind.css", "vue-final-modal/style.css"],
+  css: ["@/assets/css/tailwind.css", "vue-final-modal/style.css", "~/assets/css/main.css"],
   compatibilityDate: "2025-04-13",
 });
