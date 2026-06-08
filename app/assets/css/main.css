@@ -1,0 +1,177 @@
+@import "tailwindcss";
+
+@theme {
+  /* ─── Color palette ─── */
+  --color-forest: #1F3B2F;
+  --color-forest-dark: #152A21;
+  --color-sage: #4A7C59;
+  --color-sage-light: #6B9E7A;
+  --color-cream: #F5F0E8;
+  --color-cream-dark: #EDE6D8;
+  --color-charcoal: #1A1A1A;
+  --color-dark: #1A1A1A;
+  --color-olive: #7B8B5E;
+
+  /* ─── Typography ─── */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+
+  /* ─── Radius ─── */
+  --radius-sm: 2px;
+}
+
+/* ─────────────────────────────────────────────
+   Cookie Control banner / modal overrides
+   ───────────────────────────────────────────── */
+.cookieControl {
+  --ncc-panel-bg: var(--color-cream);
+  --ncc-panel-border: color-mix(in srgb, var(--color-charcoal) 14%, transparent);
+  --ncc-panel-shadow: 0 18px 45px rgba(26, 26, 26, 0.18);
+  --ncc-panel-radius: 1rem;
+}
+
+.cookieControl__Bar {
+  left: 50% !important;
+  right: auto !important;
+  bottom: 1rem !important;
+  width: calc(100vw - 1rem);
+  max-width: 72rem;
+  transform: translateX(-50%);
+  border: 1px solid var(--ncc-panel-border);
+  border-radius: var(--ncc-panel-radius);
+  background: var(--ncc-panel-bg) !important;
+  box-shadow: var(--ncc-panel-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
+  z-index: 60;
+}
+
+.cookieControl__BarContainer {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+}
+
+.cookieControl__BarContainer h2 {
+  margin: 0 0 0.35rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.125rem;
+  line-height: 1.2;
+  color: var(--color-dark);
+}
+
+.cookieControl__BarContainer p {
+  margin: 0;
+  max-width: 54rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--color-charcoal) 82%, transparent);
+}
+
+.cookieControl__BarButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+
+.cookieControl__BarButtons button,
+.cookieControl__ModalButtons button,
+.cookieControl__ModalClose,
+.cookieControl__ControlButton {
+  border-radius: 999px;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease, color 0.18s ease;
+}
+
+.cookieControl__BarButtons button {
+  min-height: 2.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid transparent;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.cookieControl__BarButtons button:hover,
+.cookieControl__ModalButtons button:hover,
+.cookieControl__ModalClose:hover,
+.cookieControl__ControlButton:hover {
+  transform: translateY(-1px);
+}
+
+.cookieControl__BarButtons button:first-child {
+  background: var(--color-forest);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(31, 59, 47, 0.24);
+}
+
+.cookieControl__BarButtons button:first-child:hover {
+  background: var(--color-forest-dark);
+}
+
+.cookieControl__BarButtons button:nth-child(2),
+.cookieControl__BarButtons button:nth-child(3) {
+  background: transparent;
+  border-color: color-mix(in srgb, var(--color-charcoal) 16%, transparent);
+  color: var(--color-charcoal);
+}
+
+.cookieControl__BarButtons button:nth-child(2):hover,
+.cookieControl__BarButtons button:nth-child(3):hover {
+  border-color: color-mix(in srgb, var(--color-forest) 24%, transparent);
+  background: color-mix(in srgb, var(--color-forest) 6%, transparent);
+}
+
+.cookieControl__Modal {
+  padding: 1rem;
+  background: color-mix(in srgb, rgba(26, 26, 26, 0.36) 100%, transparent);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.cookieControl__ModalContent {
+  border: 1px solid var(--ncc-panel-border);
+  border-radius: 1.25rem;
+  background: var(--ncc-panel-bg);
+  box-shadow: var(--ncc-panel-shadow);
+}
+
+.cookieControl__ModalContentInner {
+  padding: 1.25rem;
+}
+
+.cookieControl__ModalContentInner h2 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.125rem;
+  color: var(--color-dark);
+}
+
+.cookieControl__ModalContentInner ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+/* ─── Base ─── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
