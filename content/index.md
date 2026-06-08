@@ -14,8 +14,7 @@ hero:
   eyebrow: Tatouage fineline · Botanique · Paris 12e
   titleLines:
     - L'art du tatouage
-    - fineline,
-  titleEmphasis: signé Helena.
+  titleEmphasis: " signé Helena."
   subcopy: |-
     Tatoueuse brésilienne basée à Paris,
     spécialisée dans les tatouages botaniques et délicats.
@@ -27,7 +26,7 @@ hero:
       href: /gallery
   media:
     type: image
-    src: /img/helena/helena.jpg
+    src: /img/IMG-0340.jpeg
     alt: Helena de Carvalho, tatoueuse fineline
 images:
   - src: /img/minified/image1.jpg
