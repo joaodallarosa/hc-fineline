@@ -9,15 +9,13 @@ about:
     Tu penses à faire un tatouage dans ce style mais tu ne sais pas encore lequel choisir ? Écris-moi sur WhatsApp, je serai ravie de t'aider.
   ctaLabel: En savoir plus →
   ctaHref: /about
-  image: /img/helena/helena.jpg
+  image: /img/IMG-0340.jpeg
 hero:
-  eyebrow: Tatouage fineline · Botanique · Paris 12e
+  eyebrow: Fine line · Botanique · Cover-up
   titleLines:
-    - L'art du tatouage
-  titleEmphasis: " signé Helena."
-  subcopy: |-
-    Tatoueuse brésilienne basée à Paris,
-    spécialisée dans les tatouages botaniques et délicats.
+    - Tatouage fine line et botanique
+  titleEmphasis: ""
+  subcopy: Tatoueuse brésilienne basée à Paris,spécialisée dans les tatouages botaniques et délicats.
   cornerText: Paris · Studio privé
   ctas:
     - label: Réserver un tatouage
@@ -26,22 +24,22 @@ hero:
       href: /gallery
   media:
     type: image
-    src: /img/IMG-0340.jpeg
+    src: /img/IMG-0328.jpeg
     alt: Helena de Carvalho, tatoueuse fineline
 images:
-  - src: /img/minified/image1.jpg
-  - src: /img/minified/image2.jpg
-  - src: /img/minified/image3.jpg
-  - src: /img/minified/image4.jpg
-  - src: /img/minified/image5.jpg
-  - src: /img/minified/image6.jpg
+  - src: /img/minified/IMG-6352.jpeg
+  - src: /img/minified/IMG-4218.jpeg
+  - src: /img/minified/IMG-9267.jpeg
+  - src: /img/minified/IMG-0468.jpeg
+  - src: /img/minified/IMG-5042.jpeg
+  - src: /img/minified/image653.jpg
 practicalInfo:
   address: 28, Rue Nicolaï, 75012 Paris
   hours: |-
     Lundi – Samedi
     10h – 19h
-  whatsapp: https://wa.me/33600000000
-  instagram: https://instagram.com/helena.tattoo
+  whatsapp: https://wa.me/message/OXUF5MYCLX3QH1
+  instagram: https://instagram.com/carvalho_helena
   mapEmbed: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.0!2d2.3912!3d48.8466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s28+Rue+Nicola%C3%AF%2C+75012+Paris!5e0!3m2!1sfr!2sfr!4v1
 secondaryCta:
   cards:
@@ -58,9 +56,9 @@ seo:
   description: Tatoueuse brésilienne basée à Paris, spécialisée dans le tatouage fineline, botanique et floral. Studio privé, sur rendez-vous.
   ogTitle: Helena de Carvalho · Tatouage Fineline à Paris
   ogDescription: Tatoueuse brésilienne basée à Paris, spécialisée dans le tatouage fineline, botanique et floral. Studio privé, sur rendez-vous.
-  ogImage: /img/minified/image1.jpg
+  ogImage: ""
 studioImages:
-  - src: /img/studio/studio_1.jpg
+  - src: /img/studio/IMG-8317.jpeg
   - src: /img/studio/studio_2.jpg
   - src: /img/studio/studio_3.jpg
 testimonials:

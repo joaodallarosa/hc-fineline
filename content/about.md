@@ -6,7 +6,7 @@ bio:
     Je viens du sud du Brésil et je suis actuellement basée à Paris. Dans l'univers du tatouage, ma grande passion est la botanique. Je crois que les tatouages de plantes et de fleurs vont bien au-delà de l'esthétique : ils peuvent être un hommage à ceux que nous aimons ou une façon d'illustrer notre propre parcours.
 
     Situé dans le 12ème arrondissement, mon studio est un espace propre et tranquille. Vous vivrez une expérience exclusive et personnalisée — vous serez le seul client pris en charge pendant votre séance. C'est un espace calme où vous aurez mon attention exclusive pendant votre tatouage.
-  image: /img/helena/helena.jpg
+  image: /img/IMG-0363.jpeg
 hero:
   eyebrow: Tatoueuse · Paris · Originaire du Brésil
   titleLines:
@@ -19,8 +19,9 @@ hero:
   cornerText: Brésilienne · Paris
   media:
     type: image
-    src: /img/helena/helena.jpg
+    src: /img/IMG-0328.jpeg
     alt: Helena de Carvalho, tatoueuse fineline à Paris
+  ctas: []
 seo:
   title: À propos · Helena de Carvalho
   description: Helena de Carvalho, tatoueuse brésilienne basée à Paris. Découvrez son parcours, son style et sa philosophie du tatouage fineline.
