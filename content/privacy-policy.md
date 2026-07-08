@@ -1,4 +1,5 @@
 ---
+pageKey: privacy-policy
 title: "Politique de confidentialité"
 lastUpdated: "2025-04-01"
 ---

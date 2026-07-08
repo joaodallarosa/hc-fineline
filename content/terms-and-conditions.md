@@ -1,15 +1,16 @@
 ---
-title: "Mentions légales"
-lastUpdated: "2025-04-01"
+title: Mentions légales
+lastUpdated: 2025-04-01
+pageKey: terms-and-conditions
 ---
 
 ## Mentions légales
 
 ### Éditeur du site
 
-Helena de Carvalho  
-Tatoueuse indépendante  
-28, Rue Nicolaï, 75012 Paris  
+Helena de Carvalho :br
+Tatoueuse indépendante :br
+28, Rue Nicolaï, 75012 Paris
 
 ### Hébergement
 

@@ -8,7 +8,10 @@
     "dev:host": "nuxt dev --host 0.0.0.0",
     "generate": "nuxt generate",
     "preview": "nuxt build && nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "validate:content": "node scripts/validate-content.mjs",
+    "check:content": "node scripts/check-content.mjs",
+    "check:studio-conflicts": "node scripts/check-studio-conflicts.mjs"
   },
   "dependencies": {
     "@dargmuesli/nuxt-cookie-control": "^9.1.19",

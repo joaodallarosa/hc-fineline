@@ -1,4 +1,5 @@
 ---
+pageKey: terms-and-conditions
 title: "Legal Notice"
 lastUpdated: "2025-04-01"
 ---

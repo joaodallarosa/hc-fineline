@@ -1,31 +1,38 @@
 ---
-about:
-  sectionLabel: "02"
-  sectionLabelAccent: à propos
-  title: Helena de Carvalho
-  body: |-
-    Je viens du sud du Brésil et je suis actuellement basée à Paris. Dans l'univers du tatouage, ma grande passion est la botanique. Je crois que les tatouages de plantes et de fleurs vont bien au-delà de l'esthétique : ils peuvent être un hommage à ceux que nous aimons ou une façon d'illustrer notre propre parcours.
+pageKey: home
+seo:
+  title: Helena de Carvalho · Tatouage Fineline à Paris
+  description: Tatoueuse brésilienne basée à Paris, spécialisée dans le tatouage fineline, botanique et floral. Studio privé, sur rendez-vous.
+  ogTitle: Helena de Carvalho · Tatouage Fineline à Paris
+  ogDescription: Tatoueuse brésilienne basée à Paris, spécialisée dans le tatouage fineline, botanique et floral. Studio privé, sur rendez-vous.
+  ogImage: ""
+---
 
-    Tu penses à faire un tatouage dans ce style mais tu ne sais pas encore lequel choisir ? Écris-moi sur WhatsApp, je serai ravie de t'aider.
-  ctaLabel: En savoir plus →
-  ctaHref: /about
-  image: /img/IMG-0340.jpeg
-hero:
-  eyebrow: Fine line · Botanique · Cover-up
-  titleLines:
-    - Tatouage fine line et botanique
-  titleEmphasis: ""
-  subcopy: Tatoueuse brésilienne basée à Paris,spécialisée dans les tatouages botaniques et délicats.
-  cornerText: Paris · Studio privé
-  ctas:
-    - label: Réserver un tatouage
-      href: /book-online
-    - label: Voir la galerie
-      href: /gallery
-  media:
-    type: image
-    src: /img/IMG-0328.jpeg
-    alt: Helena de Carvalho, tatoueuse fineline
+::content-hero
+---
+ctas:
+  - label: Réserver un tatouage
+    href: /book-online
+  - label: Voir la galerie
+    href: /gallery
+media:
+  type: image
+  src: /img/IMG-0328.jpeg
+  alt: Helena de Carvalho, tatoueuse fineline
+titleLines:
+  - Tatouage fine line et botanique
+cornerText: Paris · Studio privé
+eyebrow: Fine line · Botanique · Cover-up
+subcopy: Tatoueuse brésilienne basée à Paris et cofondatrice du studio Maison
+  Poire, spécialisée dans les tatouages fine line et botaniques.
+---
+::
+
+:content-divider
+
+::content-gallery-section
+---
+columns: 3
 images:
   - src: /img/minified/IMG-6352.jpeg
   - src: /img/minified/IMG-4218.jpeg
@@ -33,41 +40,83 @@ images:
   - src: /img/minified/IMG-0468.jpeg
   - src: /img/minified/IMG-5042.jpeg
   - src: /img/minified/image653.jpg
-practicalInfo:
-  address: 28, Rue Nicolaï, 75012 Paris
-  hours: |-
-    Lundi – Samedi
-    10h – 19h
-  whatsapp: https://wa.me/message/OXUF5MYCLX3QH1
-  instagram: https://instagram.com/carvalho_helena
-  mapEmbed: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.0!2d2.3912!3d48.8466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s28+Rue+Nicola%C3%AF%2C+75012+Paris!5e0!3m2!1sfr!2sfr!4v1
-secondaryCta:
-  cards:
-    - title: Portfolio complet
-      description: Découvrez l'ensemble de mes créations — fineline, botanique, floral.
-      href: /gallery
-      label: Voir le portfolio
-    - title: Réserver un tatouage
-      description: Studio privé, séance individuelle. Contactez-moi pour votre projet.
-      href: /book-online
-      label: Réserver maintenant
-seo:
-  title: Helena de Carvalho · Tatouage Fineline à Paris
-  description: Tatoueuse brésilienne basée à Paris, spécialisée dans le tatouage fineline, botanique et floral. Studio privé, sur rendez-vous.
-  ogTitle: Helena de Carvalho · Tatouage Fineline à Paris
-  ogDescription: Tatoueuse brésilienne basée à Paris, spécialisée dans le tatouage fineline, botanique et floral. Studio privé, sur rendez-vous.
-  ogImage: ""
-studioImages:
-  - src: /img/studio/IMG-8317.jpeg
-  - src: /img/studio/studio_2.jpg
-  - src: /img/studio/studio_3.jpg
-testimonials:
-  sectionLabel: "03"
-  sectionLabelAccent: témoignages
-  title: Ce qu'ils disent
-works:
-  sectionLabel: "01"
-  sectionLabelAccent: portfolio
-  title: Mes créations
-  ctaLabel: Voir tout le portfolio →
+accent: portfolio
+ctaHref: /gallery
+ctaLabel: Voir tout le portfolio →
+number: "01"
+title: Mes créations
 ---
+::
+
+:content-divider
+
+::content-text-image
+---
+accent: à propos
+ctaHref: /about
+ctaLabel: En savoir plus →
+image: /img/IMG-0340.jpeg
+sectionLabel: "02"
+title: Helena de Carvalho
+---
+Je suis originaire du sud du Brésil. Après six ans dans la finance, j’ai choisi de me consacrer pleinement au tatouage en 2021. Inspirée par la nature, le dessin et la peinture à l’aquarelle, je développe un univers mêlant fine line et compositions botaniques.
+
+Tu envisages un tatouage ou un cover-up dans cet univers, mais tu ne sais pas encore quel projet te correspond le mieux ? Écris-moi sur WhatsApp, je serai ravie d’en discuter avec toi et de t’aider à imaginer une création qui te ressemble.
+::
+
+:content-divider
+
+::content-cta-cards
+  :::content-cta-card
+  ---
+  href: /gallery
+  label: Voir le portfolio
+  ---
+  Découvrez l'ensemble de mes créations — fineline, botanique, floral.
+
+  #title
+  Portfolio complet
+  :::
+
+  :::content-cta-card
+  ---
+  href: /book-online
+  label: Réserver maintenant
+  ---
+  Studio privé, séance individuelle sur rendez-vous. Contactez-moi pour votre projet.
+
+  #title
+  Réserver un tatouage
+  :::
+::
+
+:content-divider
+
+::content-gallery-section
+---
+images:
+  - src: /img/studio/IMG-8317.jpeg
+  - src: /img/studio/IMG-0296.jpeg
+  - src: /img/studio/IMG-0304.jpeg
+  - src: /img/studio/IMG-0322.jpeg
+accent: le studio
+columns: "3"
+number: "03"
+title: Bienvenue chez Maison Poire
+---
+::
+
+:content-divider
+
+:content-testimonials{accent="témoignages" section-label="04" title="Ce qu'ils disent"}
+
+:content-divider
+
+::content-practical-info
+---
+address: 28, Rue Nicolaï, 75012 Paris
+instagram: https://instagram.com/carvalho_helena
+mapEmbed: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.0!2d2.3912!3d48.8466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s28+Rue+Nicola%C3%AF%2C+75012+Paris!5e0!3m2!1sfr!2sfr!4v1
+whatsapp: https://wa.me/message/OXUF5MYCLX3QH1
+---
+::

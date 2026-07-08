@@ -1,4 +1,5 @@
 ---
+pageKey: cookie-policy
 title: "Cookie Policy"
 lastUpdated: "2025-04-01"
 ---

@@ -1,4 +1,6 @@
 import tailwindcss from '@tailwindcss/vite'
+import { normalizeStudioCompatibleBody } from './utils/studio-body-normalizer.js'
+import { assertPageIdentity } from './utils/page-identity-guard.js'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
@@ -8,6 +10,35 @@ export default defineNuxtConfig({
 
   vite: {
     plugins: [tailwindcss()],
+  },
+
+  // Auto-import all components; mark app/components/content/* as GLOBAL so the
+  // ::content-* MDC blocks resolve to <Content*> components inside markdown.
+  components: [
+    '~/components',
+    { path: '~/components/content', global: true, pathPrefix: false },
+  ],
+
+  hooks: {
+    'content:file:afterParse'(ctx) {
+      if (ctx.file.extension !== '.md') return
+      if (!ctx.content?.body) return
+
+      // Nuxt Studio compares GitHub markdown with the deployed document tree.
+      // Nuxt Content keeps a single paragraph wrapper in custom component slots,
+      // while Studio auto-unwraps that same slot content before comparing.
+      // This normalization is REQUIRED to keep that comparison aligned, and the
+      // `check:studio-conflicts` step verifies it leaves every page matching its
+      // raw GitHub markdown — so it can never silently start producing false
+      // Studio "version differs" conflicts.
+      ctx.content.body = normalizeStudioCompatibleBody(ctx.content.body)
+
+      // Fail the build if a page file's content no longer matches the page its
+      // location maps to (e.g. a Studio draft clobbered one page with another's
+      // content). Strict in production/CI builds — the deploy fails and the last
+      // good build stays live; only a warning in dev so editing is never bricked.
+      assertPageIdentity(ctx, { strict: process.env.NODE_ENV === 'production' || !!process.env.CI })
+    },
   },
 
   app: {
@@ -52,7 +83,48 @@ export default defineNuxtConfig({
 
   // ─── Nuxt Studio ───
   studio: {
-    dev: true,
+    dev: process.env.NODE_ENV !== 'production',
+    // @ts-ignore - nuxt-studio requires repository info for production builds.
+    // TODO: set these to hc-fineline's actual GitHub repository before deploying
+    // Studio in production (dev editing works without it).
+    repository: {
+      provider: 'github',
+      owner: 'TODO-github-owner',
+      repo: 'hc-fineline',
+      branch: 'main',
+    },
+    editor: {
+      // Explicitly list content components so they appear in the slash (/) command
+      // on all devices including iPad (no hover required to discover them).
+      // Keep this in sync with the Content* components actually used across
+      // content/*.md — `npm run check:content` warns if a used component is
+      // missing here (editors then can't re-insert it from the "/" menu).
+      components: {
+        include: [
+          // Page intro / hero
+          'ContentHero',
+          'ContentIntro',
+          // Generic layout primitives
+          'ContentSection',
+          'ContentCard',
+          'ContentStep',
+          'ContentTextImage',
+          'ContentDivider',
+          // Calls to action
+          'ContentCtaCards',
+          'ContentCtaCard',
+          'ContentWhatsappCta',
+          // Galleries & testimonials
+          'ContentGallerySection',
+          'ContentTestimonials',
+          // Practical info / contact
+          'ContentPracticalInfo',
+          // Care & FAQ
+          'ContentCareSection',
+          'ContentFaqSection',
+        ],
+      },
+    },
   },
 
   // ─── Cookie consent ───
@@ -115,5 +187,4 @@ export default defineNuxtConfig({
       failOnError: false,
     },
   },
-  compatibilityDate: "2025-04-13",
 });
