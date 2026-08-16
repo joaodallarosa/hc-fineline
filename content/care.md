@@ -33,11 +33,10 @@ avoid:
   - Les activités physiques intenses pendant la première semaine, notamment la
     salle de sport
 normal:
-  - Rougeur légère les premières 24–48h
-  - Légère enflure autour du tatouage
-  - Démangeaisons pendant la phase de pelage
-  - La peau qui pèle et se renouvelle
-  - Un aspect légèrement terne avant la cicatrisation complète
+  - Légère rougeur et gonflement les premiers jours
+  - Démangeaisons pendant la phase de cicatrisation
+  - Desquamation légère de la peau
+  - "Légère modification de la couleur en cicatrisant "
 steps:
   - title: Les premiers jours
     body: Pendant les 48 à 72 premières heures, il est normal que votre tatouage
@@ -68,9 +67,6 @@ steps:
   - title: Protection solaire
     body: Une fois cicatrisé, protégez votre tatouage avec un écran solaire SPF50+
       avant toute exposition au soleil.
-whenToContact: Contactez-moi si vous observez une infection (pus, rougeur
-  importante, chaleur excessive) ou si vous avez le moindre doute sur la
-  cicatrisation de votre tatouage.
 ---
 Votre tatouage est terminé ! Les premiers jours sont essentiels pour favoriser une bonne cicatrisation. Voici quelques conseils pour prendre soin de votre tatouage pendant cette période.
 ::
