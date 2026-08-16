@@ -1,6 +1,8 @@
 <template>
   <div class="relative">
-    <Menu />
+    <HeaderV2 />
+
+    <!-- <Header /> -->
 
     <Tattoos />
 

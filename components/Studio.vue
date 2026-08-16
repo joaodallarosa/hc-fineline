@@ -1,26 +1,23 @@
 <template>
-  <section id="studio" class="container mx-auto flex flex-col items-center justify-center my-10 md:my-20 px-10">
+  <section id="studio" class="container mx-auto flex flex-col items-center justify-center my-4 md:my-20 px-4">
     <h2 class="text-center text-2xl md:text-5xl uppercase">
       {{ $t("studio-title") }}
     </h2>
-    <p class="text-center mt-5 text-lg">
-      <a href="https://goo.gl/maps/KqjacKx7tV7oE29s5" target="_blank" class="underline">{{ $t("studio-address") }}</a>
-    </p>
     <p class="text-center mt-5 text-lg">
       {{ $t("studio-description") }}
     </p>
 
     <div class="container flex flex-col justify-center py-4 mx-auto">
-      <div class="grid grid-cols-1 gap-4 lg:grid-cols-5 sm:grid-cols-2">
-        <NuxtImg class="object-cover w-full dark:bg-gray-500 aspect-square rounded-lg" src="/img/studio/studio_1.jpg"
+      <div class="grid grid-cols-2 gap-1 lg:grid-cols-5 sm:grid-cols-2">
+        <NuxtImg class="object-cover w-full dark:bg-gray-500 aspect-square" src="/img/studio/studio_1.jpg"
           loading="lazy" />
-        <NuxtImg class="object-cover w-full dark:bg-gray-500 aspect-square rounded-lg" src="/img/studio/studio_2.jpg"
+        <NuxtImg class="object-cover w-full dark:bg-gray-500 aspect-square" src="/img/studio/studio_2.jpg"
           loading="lazy" />
-        <NuxtImg class="object-cover w-full dark:bg-gray-500 aspect-square rounded-lg" src="/img/studio/studio_3.jpg"
+        <NuxtImg class="object-cover w-full dark:bg-gray-500 aspect-square" src="/img/studio/studio_3.jpg"
           loading="lazy" />
-        <NuxtImg class="object-cover w-full dark:bg-gray-500 aspect-square rounded-lg" src="/img/studio/studio_4.jpg"
+        <NuxtImg class="object-cover w-full dark:bg-gray-500 aspect-square" src="/img/studio/studio_4.jpg"
           loading="lazy" />
-        <NuxtImg class="object-cover w-full dark:bg-gray-500 aspect-square rounded-lg" src="/img/studio/studio_5.jpg"
+        <NuxtImg class="object-cover w-full dark:bg-gray-500 aspect-square" src="/img/studio/studio_5.jpg"
           loading="lazy" />
       </div>
     </div>

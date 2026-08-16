@@ -34,26 +34,26 @@ function loadMoreTattoos() {
 </script>
 <template>
   <div
-    class="tattoos pt-[200px] md:pt-[150px] lg:pt-32 px-8 relative"
+    class="tattoos pt-[100px] md:pt-[150px] lg:pt-32 px-4 relative"
     id="home"
   >
     <masonry-wall
       :items="displayedImages"
       :column-width="250"
       :ssr-columns="gridColumns"
-      :gap="20"
-      :min-columns="1"
+      :gap="4"
+      :min-columns="2"
       :max-columns="2"
     >
       <template #default="{ item, index }">
         <div
-          class="bg-[#f2dad6] rounded-lg relative flex items-center justify-center"
+          class="relative flex items-center justify-center"
           :style="{ 'padding-top': '76%' }"
           @click="openModal(item.src)"
         >
           <NuxtImg
             v-if="index <= 3"
-            class="absolute inset-0 w-full h-full object-cover rounded-lg"
+            class="absolute inset-0 w-full h-full object-cover"
             :src="item.src"
             alt="Tattoo Photo"
             sizes="100vw sm:50vw md:400px"
@@ -61,7 +61,7 @@ function loadMoreTattoos() {
           />
           <NuxtImg
             v-else
-            class="absolute inset-0 w-full h-full object-cover rounded-lg"
+            class="absolute inset-0 w-full h-full object-cover"
             :src="item.src"
             loading="lazy"
             sizes="100vw sm:50vw md:400px"
@@ -72,7 +72,7 @@ function loadMoreTattoos() {
     </masonry-wall>
     <div v-if="!loadedMore" class="flex items-center justify-center w-full">
       <button
-        class="px-8 py-2 mt-8 bg-transparent text-black text-lg font-sans border border-black font-normal"
+        class="rounded-full px-4 py-2 mt-4 bg-transparent text-black border border-black font-normal"
         @click="loadMoreTattoos"
       >
         {{ $t("tattoos-load-more") }}
@@ -124,7 +124,7 @@ function loadMoreTattoos() {
   margin: 0.25rem 0 0 auto;
   padding: 0 8px;
   border: 1px solid;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
 }
 .dark .confirm-modal-content {
   background: #000;
