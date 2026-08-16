@@ -81,12 +81,10 @@ Tu envisages un tatouage ou un cover-up dans cet univers, mais tu ne sais pas en
   :::content-cta-card
   ---
   href: /book-online
-  label: Réserver maintenant
+  label: Réserver un tatouage
+  title: Réserver maintenant
   ---
-  Studio privé, séance individuelle sur rendez-vous. Contactez-moi pour votre projet.
-
-  #title
-  Réserver un tatouage
+  Tatouage sur rendez-vous. Contactez-moi pour discuter de votre projet.
   :::
 ::
 
@@ -95,10 +93,10 @@ Tu envisages un tatouage ou un cover-up dans cet univers, mais tu ne sais pas en
 ::content-gallery-section
 ---
 images:
-  - src: /img/studio/IMG-8317.jpeg
-  - src: /img/studio/IMG-0296.jpeg
-  - src: /img/studio/IMG-0304.jpeg
-  - src: /img/studio/IMG-0322.jpeg
+  - src: /img/studio/IMG-8317.JPEG
+  - src: /img/studio/IMG-1520.JPEG
+  - src: /img/studio/IMG-1284.JPEG
+  - src: /img/studio/IMG-0304.JPEG
 accent: le studio
 columns: "3"
 number: "03"

@@ -49,10 +49,10 @@ Depuis la fin de l’année 2025, je me suis également spécialisée dans les c
   :::
 
   :::content-card
-  Chaque tatouage est unique, créé spécialement pour vous après échange sur votre projet.
+  Des projets personnalisés pour transformer ou recouvrir un ancien tatouage.
 
   #title
-  Sur mesure
+  Cover-up
   :::
 ::
 
